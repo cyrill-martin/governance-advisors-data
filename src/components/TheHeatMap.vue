@@ -310,32 +310,13 @@ async function drawRectangles() {
 
   const rectGroup = ctr.value.append("g").attr("class", "rect-group")
 
-  // if (seatsGroup.empty()) {
-  //   seatsGroup = ctr.value.append("g").attr("class", "seats-group")
-  // }
-
-  // const exitTransition = d3.transition().duration(2500)
-  // const enterTransition =
-  //   council.numberOfFetches === 1
-  //     ? d3.transition().duration(2500)
-  //     : exitTransition.transition().duration(2500)
-  const updateTransition = d3.transition().duration(2500)
-
   // Bind data to rectangles and handle exit transition first
   const rectangles = rectGroup
     .selectAll("rect")
     .data(data, (d) => `${d.Year}_${d[appStore.selectedVariable]}`)
 
   // (exit) =>
-  // circles
-  //   .exit()
-  //   .transition(exitTransition)
-  //   .attr("cx", (d) => xAccessor(d))
-  //   .attr("cy", (d) => yAccessor(d, "exit"))
-  //   .attr("r", seatRadius.value)
-  //   .attr("fill", (d) => colorAccessor(d))
-  //   .attr("fill-opacity", 0)
-  //   .remove()
+  rectangles.exit().remove()
 
   // (enter) =>
   rectangles
@@ -348,15 +329,6 @@ async function drawRectangles() {
     .attr("height", yScale.value.bandwidth())
     .attr("stroke", "black")
     .attr("fill", (d) => colorAccessor(d))
-
-  // .attr("cx", (d) => xAccessor(d))
-  // .attr("cy", (d) => yAccessor(d, "enter"))
-  // .attr("r", seatRadius.value)
-  // .attr("fill", (d) => colorAccessor(d))
-  // .attr("fill-opacity", 0)
-  // .attr("stroke", (d) => (d.focus ? focusColorAccessor(d) : null))
-  // .attr("stroke-width", (d) => (d.focus ? seatRadius.value * 2 : null))
-  // .attr("stroke-opacity", (d) => (d.focus ? focusOpacity : null))
   // .on("click", (_, d) => {
   //   screenSize.isMobile ? null : window.open(d.url, "_blank")
   // })
@@ -381,15 +353,14 @@ async function drawRectangles() {
 
   // (update) =>
   rectangles
-    .transition(updateTransition)
+    .transition()
+    .duration(1000)
     .attr("x", (d) => xAccessor(d))
     .attr("y", (d) => yAccessor(d))
     .attr("width", xScale.value.bandwidth())
     .attr("height", yScale.value.bandwidth())
     .attr("fill", (d) => colorAccessor(d))
   // .attr("cursor", "pointer")
-
-  // d3.select(".seats-group").raise()
 }
 </script>
 

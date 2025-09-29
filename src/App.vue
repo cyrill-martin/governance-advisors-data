@@ -40,15 +40,15 @@ onMounted(() => {
 }
 
 header {
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 main {
   flex-grow: 1; /* Main content expands to fill any remaining space */
-  padding: 0 1rem;
+  padding: 1rem 2rem;
 }
 
 footer {
-  padding: 1rem;
+  padding: 2rem;
 }
 </style>
