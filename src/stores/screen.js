@@ -1,7 +1,7 @@
 import { ref, computed } from "vue"
 import { defineStore } from "pinia"
 
-const mobileThreshold = 768
+const mobileThreshold = 999
 
 export const useScreenStore = defineStore("screen", () => {
   const width = ref(window.innerWidth)

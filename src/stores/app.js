@@ -8,11 +8,14 @@ export const useAppStore = defineStore("app", () => {
   const variables = ref([])
   const years = ref([])
 
+  const colors = ref(["#FFEB84", "#4682B4", "#191970"])
+
   const selectedVariable = ref(null)
   const percentageValues = ref(false)
   const selectedYearsRange = ref([])
 
   const allSet = ref(false)
+  const mapDrawn = ref(false)
 
   async function loadAndSetData() {
     try {
@@ -93,5 +96,7 @@ export const useAppStore = defineStore("app", () => {
     selectedYearsRange,
     allSet,
     percentageValues,
+    colors,
+    mapDrawn,
   }
 })

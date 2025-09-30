@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed } from "vue"
+import { onMounted, ref, watch, computed } from "vue"
 import d3 from "@/d3-importer.js"
 import { useScreenStore } from "@/stores/screen.js"
 import { useAppStore } from "@/stores/app.js"
@@ -9,12 +9,18 @@ const screenSize = useScreenStore()
 const appStore = useAppStore()
 const { t } = useI18n()
 
+onMounted(() => {
+  tooltip.value = d3.select("#tooltip")
+})
+
 watch(
   () => appStore.allSet,
   () => {
     drawHeatMap()
   },
 )
+
+const tooltip = ref(null)
 
 const svg = ref(null)
 const ctr = ref(null)
@@ -43,7 +49,6 @@ const yScale = ref(null)
 const yAxis = ref(null)
 
 const colorScale = ref(null)
-const colors = ["#deebf7", "#3182bd"]
 
 async function drawHeatMap() {
   yearsDomain.value = await getYearsDomain()
@@ -57,6 +62,7 @@ async function drawHeatMap() {
   await drawXaxis()
   await drawYaxis()
   await drawRectangles()
+  appStore.mapDrawn = true
 }
 
 async function updateAxes(type) {
@@ -74,7 +80,7 @@ async function setVizDimensions(element) {
 
   vizDimensions.value.height = vizDimensions.value.width * heightFactor
 
-  vizDimensions.value.margin.top = screenSize.isMobile ? 100 : 10
+  vizDimensions.value.margin.top = screenSize.isMobile ? 150 : 10
   vizDimensions.value.margin.right = 10
   vizDimensions.value.margin.bottom = screenSize.isMobile ? 10 : 40
   vizDimensions.value.margin.left = 10
@@ -85,6 +91,8 @@ async function setVizDimensions(element) {
   vizDimensions.value.ctrHeight =
     vizDimensions.value.height - vizDimensions.value.margin.top - vizDimensions.value.margin.bottom
 }
+
+const pointZero = screenSize.isMobile ? 25 : 260
 
 // Setting up the SVG
 async function initiateSvg() {
@@ -175,9 +183,13 @@ async function getColorDomain() {
   if (!appStore.selectedVariable) return null
 
   if (appStore.percentageValues) {
-    return [0, 100]
+    return [0, 50, 100]
   } else {
-    return d3.extent(appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count))
+    const minMax = d3.extent(
+      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count),
+    )
+    const midValue = minMax[0] + minMax[1] / 2
+    return [minMax[0], midValue, minMax[1]]
   }
 }
 
@@ -193,15 +205,11 @@ const yDomain = computed(() => {
   return screenSize.isMobile ? yearsDomain.value : variableDomain.value
 })
 
-const pointZero = screenSize.isMobile ? 25 : 250
-
 async function setXScale() {
   xScale.value = d3
     .scaleBand()
     .domain(xDomain.value)
     .range([pointZero, vizDimensions.value.ctrWidth])
-    // .paddingInner(0.2)
-    // .paddingOuter(0.2)
     .align(0.5)
 }
 
@@ -215,9 +223,9 @@ async function drawXaxis() {
     .append("g")
     .attr("id", "x-axis")
     .attr("transform", `translate(0, ${yTranslation})`)
-    .style("font-size", () => (screenSize.isMobile ? "8px" : "14px"))
+    .style("font-size", () => (screenSize.isMobile ? "10px" : "14px"))
 
-  xAxis.value.call(axisCall.tickSize(0).tickPadding(10))
+  xAxis.value.call(axisCall.tickSize(0).tickPadding(8))
 
   xAxis.value
     .selectAll("text")
@@ -239,9 +247,7 @@ async function updateXaxis() {
   xScale.value.domain(xDomain.value)
 
   xAxis.value
-    // .transition()
-    // .duration(250)
-    .call(axisCall.tickSize(0).tickPadding(10))
+    .call(axisCall.tickSize(0).tickPadding(8))
     .selectAll("text")
     .attr("transform", `rotate(${labelRotation})`)
     .style("text-anchor", `${labelAnchor}`)
@@ -256,8 +262,6 @@ async function setYScale() {
     .scaleBand()
     .domain(yDomain.value)
     .range([0, vizDimensions.value.ctrHeight])
-    // .paddingInner(0.2)
-    // .paddingOuter(0.2)
     .align(0.5)
 }
 
@@ -266,19 +270,19 @@ async function drawYaxis() {
     .append("g")
     .attr("id", "y-axis")
     .attr("transform", `translate(${pointZero}, 0)`)
-    .style("font-size", () => (screenSize.isMobile ? "8px" : "14px"))
-    .call(d3.axisLeft(yScale.value).tickSize(0).tickPadding(10))
+    .style("font-size", () => (screenSize.isMobile ? "10px" : "14px"))
+    .call(d3.axisLeft(yScale.value).tickSize(0).tickPadding(8))
 }
 
 async function updateYaxis() {
   if (!yScale.value) return
 
   yScale.value.domain(yDomain.value)
-  yAxis.value.call(d3.axisLeft(yScale.value).tickSize(0).tickPadding(10))
+  yAxis.value.call(d3.axisLeft(yScale.value).tickSize(0).tickPadding(8))
 }
 
 async function setColorScale() {
-  colorScale.value = d3.scaleLinear().range(colors).domain(colorDomain.value)
+  colorScale.value = d3.scaleLinear().range(appStore.colors).domain(colorDomain.value)
 }
 
 function accessorHelper(variable, value) {
@@ -334,53 +338,54 @@ async function drawRectangles() {
     .attr("height", yScale.value.bandwidth())
     .attr("stroke", "black")
     .attr("fill", (d) => colorAccessor(d))
+    .attr("cursor", "pointer")
+    .on("mouseover", (_, d) => {
+      addMouseover(d)
+    })
+    .on("mousemove", (event) => handleMouseMove(event))
+    .on("mouseout", () => hideTooltip())
+}
 
-  // (enter) =>
-  // rectangles
-  //   .enter()
-  //   .append("rect")
-  //   .attr("class", "rectangle")
-  //   .attr("x", (d) => xAccessor(d))
-  //   .attr("y", (d) => yAccessor(d))
-  //   .attr("width", xScale.value.bandwidth())
-  //   .attr("height", yScale.value.bandwidth())
-  //   .attr("stroke", "black")
-  //   .attr("fill", (d) => colorAccessor(d))
-  // .on("click", (_, d) => {
-  //   screenSize.isMobile ? null : window.open(d.url, "_blank")
-  // })
-  // .on("mouseover", (_, d) =>
-  //   setTimeout(
-  //     () => {
-  //       addMouseover(d)
-  //       // }, 100)
-  //     },
-  //     screenSize.isMobile ? 100 : 0,
-  //   ),
-  // )
-  // .on("mousemove", (event) => handleMouseMove(event))
-  // .on("mouseout", () => resetTooltip())
-  // .on("contextmenu", (event, d) => handleRighClick(event, d))
-  // .transition(enterTransition)
-  // .attr("cx", (d) => xAccessor(d))
-  // .attr("cy", (d) => yAccessor(d))
-  // .attr("fill", (d) => colorAccessor(d))
-  // .attr("fill-opacity", opacity.value)
-  // .attr("cursor", "pointer")
+function addMouseover(d) {
+  tooltip.value.select(".year").text(d.Year)
+  tooltip.value
+    .select(".variable")
+    .text(t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`))
 
-  // (update) =>
-  // rectangles
-  //   // .transition()
-  //   // .duration(3000)
-  //   .attr("x", (d) => xAccessor(d))
-  //   .attr("y", (d) => yAccessor(d))
-  //   .attr("width", xScale.value.bandwidth())
-  //   .attr("height", yScale.value.bandwidth())
-  //   .attr("fill", (d) => colorAccessor(d))
-  // .attr("cursor", "pointer")
+  const label = appStore.percentageValues ? "%" : " board members"
+  const value = appStore.percentageValues ? d.Percentage : d.Count
+  tooltip.value.select(".value").text(`${value}${label}`)
+
+  tooltip.value.style("visibility", "visible")
+}
+
+function handleMouseMove(event) {
+  tooltip.value.style("left", `${event.clientX + 15}px`).style("top", `${event.clientY - 60}px`)
+}
+
+function hideTooltip() {
+  tooltip.value.style("visibility", "hidden")
 }
 </script>
 
 <template>
-  <div id="heat-map"></div>
+  <div id="tooltip">
+    <div class="year"></div>
+    <div class="variable"></div>
+    <div>&nbsp;</div>
+    <div class="value"></div>
+  </div>
 </template>
+
+<style scoped>
+#tooltip {
+  text-align: center;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(247, 247, 247, 0.85);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+}
+</style>

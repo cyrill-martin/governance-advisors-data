@@ -53,4 +53,10 @@ function handleAbout() {
 .navigation nav {
   cursor: pointer;
 }
+
+@media only screen and (width <= 999px) {
+  .home-link img {
+    width: 125px;
+  }
+}
 </style>

@@ -40,7 +40,7 @@ onMounted(() => {
 }
 
 header {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0rem 1rem;
 }
 
 main {
