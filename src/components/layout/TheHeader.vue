@@ -24,7 +24,7 @@ function handleAbout() {
     </div>
   </n-flex>
   <n-drawer v-model:show="showAbout" :width="'75%'">
-    <n-drawer-content title="About" closable>
+    <n-drawer-content closable>
       Some basic text about the data and the website, etc.</n-drawer-content
     >
   </n-drawer>

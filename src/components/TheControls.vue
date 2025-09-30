@@ -59,8 +59,8 @@ const flexAlignment = computed(() => {
       <n-flex vertical align="start">
         <label v-if="!screenSize.isMobile">&nbsp;</label>
         <n-flex>
-          <n-switch v-model:value="percentageValues">tttt</n-switch>
-          <span :class="{ inactive: !percentageValues }">Percentages</span>
+          <n-switch v-model:value="percentageValues" />
+          <span :class="{ inactive: !percentageValues }">Show %</span>
         </n-flex>
       </n-flex>
     </div>

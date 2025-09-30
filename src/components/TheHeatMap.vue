@@ -239,8 +239,8 @@ async function updateXaxis() {
   xScale.value.domain(xDomain.value)
 
   xAxis.value
-    .transition()
-    .duration(250)
+    // .transition()
+    // .duration(250)
     .call(axisCall.tickSize(0).tickPadding(10))
     .selectAll("text")
     .attr("transform", `rotate(${labelRotation})`)
@@ -308,7 +308,11 @@ async function drawRectangles() {
     yearsDomain.value.includes(item.Year),
   )
 
-  const rectGroup = ctr.value.append("g").attr("class", "rect-group")
+  let rectGroup = ctr.value.select(".rect-group")
+
+  if (rectGroup.empty()) {
+    rectGroup = ctr.value.append("g").attr("class", "rect-group")
+  }
 
   // Bind data to rectangles and handle exit transition first
   const rectangles = rectGroup
@@ -318,17 +322,30 @@ async function drawRectangles() {
   // (exit) =>
   rectangles.exit().remove()
 
-  // (enter) =>
+  // ENTER + UPDATE
   rectangles
     .enter()
     .append("rect")
     .attr("class", "rectangle")
+    .merge(rectangles) // ← merge new and existing rects
     .attr("x", (d) => xAccessor(d))
     .attr("y", (d) => yAccessor(d))
     .attr("width", xScale.value.bandwidth())
     .attr("height", yScale.value.bandwidth())
     .attr("stroke", "black")
     .attr("fill", (d) => colorAccessor(d))
+
+  // (enter) =>
+  // rectangles
+  //   .enter()
+  //   .append("rect")
+  //   .attr("class", "rectangle")
+  //   .attr("x", (d) => xAccessor(d))
+  //   .attr("y", (d) => yAccessor(d))
+  //   .attr("width", xScale.value.bandwidth())
+  //   .attr("height", yScale.value.bandwidth())
+  //   .attr("stroke", "black")
+  //   .attr("fill", (d) => colorAccessor(d))
   // .on("click", (_, d) => {
   //   screenSize.isMobile ? null : window.open(d.url, "_blank")
   // })
@@ -352,14 +369,14 @@ async function drawRectangles() {
   // .attr("cursor", "pointer")
 
   // (update) =>
-  rectangles
-    .transition()
-    .duration(1000)
-    .attr("x", (d) => xAccessor(d))
-    .attr("y", (d) => yAccessor(d))
-    .attr("width", xScale.value.bandwidth())
-    .attr("height", yScale.value.bandwidth())
-    .attr("fill", (d) => colorAccessor(d))
+  // rectangles
+  //   // .transition()
+  //   // .duration(3000)
+  //   .attr("x", (d) => xAccessor(d))
+  //   .attr("y", (d) => yAccessor(d))
+  //   .attr("width", xScale.value.bandwidth())
+  //   .attr("height", yScale.value.bandwidth())
+  //   .attr("fill", (d) => colorAccessor(d))
   // .attr("cursor", "pointer")
 }
 </script>

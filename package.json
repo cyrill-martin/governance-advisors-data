@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist -r https://github.com/cyrill-martin/governance-advisors-data.git"
   },
   "dependencies": {

@@ -1,3 +1,17 @@
-import * as d3 from "d3"
+import { select, selectAll } from "d3-selection"
+import { extent } from "d3-array"
+import { axisBottom, axisLeft, axisTop } from "d3-axis"
+import { scaleBand, scaleLinear } from "d3-scale"
+import { transition } from "d3-transition"
 
-export default d3
+export default {
+  select,
+  selectAll,
+  extent,
+  axisBottom,
+  axisLeft,
+  axisTop,
+  scaleBand,
+  scaleLinear,
+  transition,
+}
