@@ -517,20 +517,6 @@
       "Gender": "Female",
       "Count": 72,
       "Percentage": 36
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Gender": "Male",
-      "Count": 26,
-      "Percentage": 65
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Gender": "Female",
-      "Count": 14,
-      "Percentage": 35
     }
   ],
   "Experiences": [
@@ -2864,69 +2850,6 @@
       "Experiences": "Sustainable_d",
       "Count": 14,
       "Percentage": 7
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "Finance_d",
-      "Count": 33,
-      "Percentage": 82
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "MA_d",
-      "Count": 17,
-      "Percentage": 42
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "EmergingMarkets_d",
-      "Count": 16,
-      "Percentage": 40
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "International_d",
-      "Count": 40,
-      "Percentage": 100
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "CEO_d",
-      "Count": 23,
-      "Percentage": 57
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "Digitalization_d",
-      "Count": 9,
-      "Percentage": 22
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "Industry_d",
-      "Count": 26,
-      "Percentage": 65
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "Legal_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Experiences": "Sustainable_d",
-      "Count": 2,
-      "Percentage": 5
     }
   ],
   "Education": [
@@ -5259,69 +5182,6 @@
       "NumberOfBoardMembers": 201,
       "Education": "Fachexperte, Master",
       "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Dr.",
-      "Count": 2,
-      "Percentage": 5
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Bachelor",
-      "Count": 5,
-      "Percentage": 12
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Master",
-      "Count": 29,
-      "Percentage": 72
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Fachexperte",
-      "Count": 2,
-      "Percentage": 5
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Dr., Prof.",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Prof.",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Berufsausbildung",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
       "Percentage": 0
     }
   ],
@@ -8692,97 +8552,6 @@
       "Nationalities": "MENA_d",
       "Count": 2,
       "Percentage": 1
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "CH_d",
-      "Count": 12,
-      "Percentage": 30
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "DE_AT_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "FR_d",
-      "Count": 3,
-      "Percentage": 8
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "IT_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "BENELU_d",
-      "Count": 3,
-      "Percentage": 8
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "ES_PT_d",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "SCANDIC_d",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "ANGLO_d",
-      "Count": 21,
-      "Percentage": 52
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "EAST_EU_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "ASIA_PAC_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "EM_ASIA_d",
-      "Count": 3,
-      "Percentage": 8
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "LATAM_d",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Nationalities": "MENA_d",
-      "Count": 1,
-      "Percentage": 2
     }
   ],
   "Specializations": [
@@ -10080,41 +9849,6 @@
       "Specializations": "Other_d",
       "Count": 14,
       "Percentage": 7
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Specializations": "Engineering_d",
-      "Count": 7,
-      "Percentage": 18
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Specializations": "NaturalSc_d",
-      "Count": 2,
-      "Percentage": 5
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Specializations": "BusEco_d",
-      "Count": 29,
-      "Percentage": 72
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Specializations": "Law_d",
-      "Count": 1,
-      "Percentage": 2
-    },
-    {
-      "Year": 2025,
-      "NumberOfBoardMembers": 40,
-      "Specializations": "Other_d",
-      "Count": 5,
-      "Percentage": 12
     }
   ]
 }
