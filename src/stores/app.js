@@ -32,7 +32,7 @@ export const useAppStore = defineStore("app", () => {
 
   async function getBoardMembers() {
     try {
-      const response = await fetch("/data/boardMembers.json")
+      const response = await fetch("/data/boardMembers-b.json")
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
