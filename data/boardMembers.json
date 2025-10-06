@@ -519,6 +519,526 @@
       "Percentage": 36
     }
   ],
+  "Age_d": [
+    {
+      "Year": 1988,
+      "NumberOfBoardMembers": 213,
+      "Age_d": "Yes",
+      "Count": 93,
+      "Percentage": 44
+    },
+    {
+      "Year": 1988,
+      "NumberOfBoardMembers": 213,
+      "Age_d": "No",
+      "Count": 120,
+      "Percentage": 56
+    },
+    {
+      "Year": 1989,
+      "NumberOfBoardMembers": 231,
+      "Age_d": "Yes",
+      "Count": 94,
+      "Percentage": 41
+    },
+    {
+      "Year": 1989,
+      "NumberOfBoardMembers": 231,
+      "Age_d": "No",
+      "Count": 137,
+      "Percentage": 59
+    },
+    {
+      "Year": 1990,
+      "NumberOfBoardMembers": 223,
+      "Age_d": "Yes",
+      "Count": 88,
+      "Percentage": 39
+    },
+    {
+      "Year": 1990,
+      "NumberOfBoardMembers": 223,
+      "Age_d": "No",
+      "Count": 135,
+      "Percentage": 61
+    },
+    {
+      "Year": 1991,
+      "NumberOfBoardMembers": 213,
+      "Age_d": "Yes",
+      "Count": 86,
+      "Percentage": 40
+    },
+    {
+      "Year": 1991,
+      "NumberOfBoardMembers": 213,
+      "Age_d": "No",
+      "Count": 127,
+      "Percentage": 60
+    },
+    {
+      "Year": 1992,
+      "NumberOfBoardMembers": 194,
+      "Age_d": "Yes",
+      "Count": 78,
+      "Percentage": 40
+    },
+    {
+      "Year": 1992,
+      "NumberOfBoardMembers": 194,
+      "Age_d": "No",
+      "Count": 116,
+      "Percentage": 60
+    },
+    {
+      "Year": 1993,
+      "NumberOfBoardMembers": 160,
+      "Age_d": "Yes",
+      "Count": 69,
+      "Percentage": 43
+    },
+    {
+      "Year": 1993,
+      "NumberOfBoardMembers": 160,
+      "Age_d": "No",
+      "Count": 91,
+      "Percentage": 57
+    },
+    {
+      "Year": 1994,
+      "NumberOfBoardMembers": 173,
+      "Age_d": "Yes",
+      "Count": 79,
+      "Percentage": 46
+    },
+    {
+      "Year": 1994,
+      "NumberOfBoardMembers": 173,
+      "Age_d": "No",
+      "Count": 94,
+      "Percentage": 54
+    },
+    {
+      "Year": 1995,
+      "NumberOfBoardMembers": 170,
+      "Age_d": "Yes",
+      "Count": 75,
+      "Percentage": 44
+    },
+    {
+      "Year": 1995,
+      "NumberOfBoardMembers": 170,
+      "Age_d": "No",
+      "Count": 95,
+      "Percentage": 56
+    },
+    {
+      "Year": 1996,
+      "NumberOfBoardMembers": 175,
+      "Age_d": "Yes",
+      "Count": 76,
+      "Percentage": 43
+    },
+    {
+      "Year": 1996,
+      "NumberOfBoardMembers": 175,
+      "Age_d": "No",
+      "Count": 99,
+      "Percentage": 57
+    },
+    {
+      "Year": 1997,
+      "NumberOfBoardMembers": 170,
+      "Age_d": "Yes",
+      "Count": 80,
+      "Percentage": 47
+    },
+    {
+      "Year": 1997,
+      "NumberOfBoardMembers": 170,
+      "Age_d": "No",
+      "Count": 90,
+      "Percentage": 53
+    },
+    {
+      "Year": 1998,
+      "NumberOfBoardMembers": 178,
+      "Age_d": "Yes",
+      "Count": 86,
+      "Percentage": 48
+    },
+    {
+      "Year": 1998,
+      "NumberOfBoardMembers": 178,
+      "Age_d": "No",
+      "Count": 92,
+      "Percentage": 52
+    },
+    {
+      "Year": 1999,
+      "NumberOfBoardMembers": 178,
+      "Age_d": "Yes",
+      "Count": 85,
+      "Percentage": 48
+    },
+    {
+      "Year": 1999,
+      "NumberOfBoardMembers": 178,
+      "Age_d": "No",
+      "Count": 93,
+      "Percentage": 52
+    },
+    {
+      "Year": 2000,
+      "NumberOfBoardMembers": 215,
+      "Age_d": "Yes",
+      "Count": 107,
+      "Percentage": 50
+    },
+    {
+      "Year": 2000,
+      "NumberOfBoardMembers": 215,
+      "Age_d": "No",
+      "Count": 108,
+      "Percentage": 50
+    },
+    {
+      "Year": 2001,
+      "NumberOfBoardMembers": 200,
+      "Age_d": "Yes",
+      "Count": 100,
+      "Percentage": 50
+    },
+    {
+      "Year": 2001,
+      "NumberOfBoardMembers": 200,
+      "Age_d": "No",
+      "Count": 100,
+      "Percentage": 50
+    },
+    {
+      "Year": 2002,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "Yes",
+      "Count": 104,
+      "Percentage": 54
+    },
+    {
+      "Year": 2002,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "No",
+      "Count": 89,
+      "Percentage": 46
+    },
+    {
+      "Year": 2003,
+      "NumberOfBoardMembers": 195,
+      "Age_d": "Yes",
+      "Count": 102,
+      "Percentage": 52
+    },
+    {
+      "Year": 2003,
+      "NumberOfBoardMembers": 195,
+      "Age_d": "No",
+      "Count": 93,
+      "Percentage": 48
+    },
+    {
+      "Year": 2004,
+      "NumberOfBoardMembers": 204,
+      "Age_d": "Yes",
+      "Count": 99,
+      "Percentage": 49
+    },
+    {
+      "Year": 2004,
+      "NumberOfBoardMembers": 204,
+      "Age_d": "No",
+      "Count": 105,
+      "Percentage": 51
+    },
+    {
+      "Year": 2005,
+      "NumberOfBoardMembers": 203,
+      "Age_d": "Yes",
+      "Count": 96,
+      "Percentage": 47
+    },
+    {
+      "Year": 2005,
+      "NumberOfBoardMembers": 203,
+      "Age_d": "No",
+      "Count": 107,
+      "Percentage": 53
+    },
+    {
+      "Year": 2006,
+      "NumberOfBoardMembers": 221,
+      "Age_d": "Yes",
+      "Count": 99,
+      "Percentage": 45
+    },
+    {
+      "Year": 2006,
+      "NumberOfBoardMembers": 221,
+      "Age_d": "No",
+      "Count": 122,
+      "Percentage": 55
+    },
+    {
+      "Year": 2007,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "Yes",
+      "Count": 89,
+      "Percentage": 46
+    },
+    {
+      "Year": 2007,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "No",
+      "Count": 104,
+      "Percentage": 54
+    },
+    {
+      "Year": 2008,
+      "NumberOfBoardMembers": 198,
+      "Age_d": "Yes",
+      "Count": 93,
+      "Percentage": 47
+    },
+    {
+      "Year": 2008,
+      "NumberOfBoardMembers": 198,
+      "Age_d": "No",
+      "Count": 105,
+      "Percentage": 53
+    },
+    {
+      "Year": 2009,
+      "NumberOfBoardMembers": 191,
+      "Age_d": "Yes",
+      "Count": 88,
+      "Percentage": 46
+    },
+    {
+      "Year": 2009,
+      "NumberOfBoardMembers": 191,
+      "Age_d": "No",
+      "Count": 103,
+      "Percentage": 54
+    },
+    {
+      "Year": 2010,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "Yes",
+      "Count": 82,
+      "Percentage": 42
+    },
+    {
+      "Year": 2010,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "No",
+      "Count": 111,
+      "Percentage": 58
+    },
+    {
+      "Year": 2011,
+      "NumberOfBoardMembers": 199,
+      "Age_d": "Yes",
+      "Count": 79,
+      "Percentage": 40
+    },
+    {
+      "Year": 2011,
+      "NumberOfBoardMembers": 199,
+      "Age_d": "No",
+      "Count": 120,
+      "Percentage": 60
+    },
+    {
+      "Year": 2012,
+      "NumberOfBoardMembers": 204,
+      "Age_d": "Yes",
+      "Count": 84,
+      "Percentage": 41
+    },
+    {
+      "Year": 2012,
+      "NumberOfBoardMembers": 204,
+      "Age_d": "No",
+      "Count": 120,
+      "Percentage": 59
+    },
+    {
+      "Year": 2013,
+      "NumberOfBoardMembers": 203,
+      "Age_d": "Yes",
+      "Count": 88,
+      "Percentage": 43
+    },
+    {
+      "Year": 2013,
+      "NumberOfBoardMembers": 203,
+      "Age_d": "No",
+      "Count": 115,
+      "Percentage": 57
+    },
+    {
+      "Year": 2014,
+      "NumberOfBoardMembers": 188,
+      "Age_d": "Yes",
+      "Count": 79,
+      "Percentage": 42
+    },
+    {
+      "Year": 2014,
+      "NumberOfBoardMembers": 188,
+      "Age_d": "No",
+      "Count": 109,
+      "Percentage": 58
+    },
+    {
+      "Year": 2015,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "Yes",
+      "Count": 77,
+      "Percentage": 39
+    },
+    {
+      "Year": 2015,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "No",
+      "Count": 119,
+      "Percentage": 61
+    },
+    {
+      "Year": 2016,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "Yes",
+      "Count": 77,
+      "Percentage": 39
+    },
+    {
+      "Year": 2016,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "No",
+      "Count": 119,
+      "Percentage": 61
+    },
+    {
+      "Year": 2017,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "Yes",
+      "Count": 77,
+      "Percentage": 39
+    },
+    {
+      "Year": 2017,
+      "NumberOfBoardMembers": 196,
+      "Age_d": "No",
+      "Count": 119,
+      "Percentage": 61
+    },
+    {
+      "Year": 2018,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "Yes",
+      "Count": 86,
+      "Percentage": 45
+    },
+    {
+      "Year": 2018,
+      "NumberOfBoardMembers": 193,
+      "Age_d": "No",
+      "Count": 107,
+      "Percentage": 55
+    },
+    {
+      "Year": 2019,
+      "NumberOfBoardMembers": 199,
+      "Age_d": "Yes",
+      "Count": 86,
+      "Percentage": 43
+    },
+    {
+      "Year": 2019,
+      "NumberOfBoardMembers": 199,
+      "Age_d": "No",
+      "Count": 113,
+      "Percentage": 57
+    },
+    {
+      "Year": 2020,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "Yes",
+      "Count": 89,
+      "Percentage": 43
+    },
+    {
+      "Year": 2020,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "No",
+      "Count": 120,
+      "Percentage": 57
+    },
+    {
+      "Year": 2021,
+      "NumberOfBoardMembers": 208,
+      "Age_d": "Yes",
+      "Count": 92,
+      "Percentage": 44
+    },
+    {
+      "Year": 2021,
+      "NumberOfBoardMembers": 208,
+      "Age_d": "No",
+      "Count": 116,
+      "Percentage": 56
+    },
+    {
+      "Year": 2022,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "Yes",
+      "Count": 94,
+      "Percentage": 45
+    },
+    {
+      "Year": 2022,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "No",
+      "Count": 115,
+      "Percentage": 55
+    },
+    {
+      "Year": 2023,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "Yes",
+      "Count": 93,
+      "Percentage": 44
+    },
+    {
+      "Year": 2023,
+      "NumberOfBoardMembers": 209,
+      "Age_d": "No",
+      "Count": 116,
+      "Percentage": 56
+    },
+    {
+      "Year": 2024,
+      "NumberOfBoardMembers": 201,
+      "Age_d": "Yes",
+      "Count": 81,
+      "Percentage": 40
+    },
+    {
+      "Year": 2024,
+      "NumberOfBoardMembers": 201,
+      "Age_d": "No",
+      "Count": 120,
+      "Percentage": 60
+    }
+  ],
   "Experiences": [
     {
       "Year": 1988,
@@ -2850,2339 +3370,6 @@
       "Experiences": "Sustainable_d",
       "Count": 12,
       "Percentage": 6
-    }
-  ],
-  "Education": [
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Dr.",
-      "Count": 97,
-      "Percentage": 46
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Bachelor",
-      "Count": 8,
-      "Percentage": 4
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Master",
-      "Count": 44,
-      "Percentage": 21
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Fachexperte",
-      "Count": 18,
-      "Percentage": 8
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Dr., Prof.",
-      "Count": 26,
-      "Percentage": 12
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Berufsausbildung",
-      "Count": 20,
-      "Percentage": 9
-    },
-    {
-      "Year": 1988,
-      "NumberOfBoardMembers": 213,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Dr.",
-      "Count": 98,
-      "Percentage": 42
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Bachelor",
-      "Count": 11,
-      "Percentage": 5
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Master",
-      "Count": 53,
-      "Percentage": 23
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Fachexperte",
-      "Count": 20,
-      "Percentage": 9
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Dr., Prof.",
-      "Count": 27,
-      "Percentage": 12
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Berufsausbildung",
-      "Count": 22,
-      "Percentage": 10
-    },
-    {
-      "Year": 1989,
-      "NumberOfBoardMembers": 231,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Dr.",
-      "Count": 91,
-      "Percentage": 41
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Bachelor",
-      "Count": 10,
-      "Percentage": 4
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Master",
-      "Count": 51,
-      "Percentage": 23
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Fachexperte",
-      "Count": 21,
-      "Percentage": 9
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Dr., Prof.",
-      "Count": 26,
-      "Percentage": 12
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Berufsausbildung",
-      "Count": 24,
-      "Percentage": 11
-    },
-    {
-      "Year": 1990,
-      "NumberOfBoardMembers": 223,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Dr.",
-      "Count": 88,
-      "Percentage": 41
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Bachelor",
-      "Count": 10,
-      "Percentage": 5
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Master",
-      "Count": 45,
-      "Percentage": 21
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Fachexperte",
-      "Count": 24,
-      "Percentage": 11
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Dr., Prof.",
-      "Count": 24,
-      "Percentage": 11
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Berufsausbildung",
-      "Count": 22,
-      "Percentage": 10
-    },
-    {
-      "Year": 1991,
-      "NumberOfBoardMembers": 213,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Dr.",
-      "Count": 81,
-      "Percentage": 42
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Bachelor",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Master",
-      "Count": 39,
-      "Percentage": 20
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Fachexperte",
-      "Count": 20,
-      "Percentage": 10
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Dr., Prof.",
-      "Count": 25,
-      "Percentage": 13
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Berufsausbildung",
-      "Count": 18,
-      "Percentage": 9
-    },
-    {
-      "Year": 1992,
-      "NumberOfBoardMembers": 194,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Dr.",
-      "Count": 61,
-      "Percentage": 38
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Bachelor",
-      "Count": 11,
-      "Percentage": 7
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Master",
-      "Count": 32,
-      "Percentage": 20
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Fachexperte",
-      "Count": 19,
-      "Percentage": 12
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Dr., Prof.",
-      "Count": 23,
-      "Percentage": 14
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Berufsausbildung",
-      "Count": 14,
-      "Percentage": 9
-    },
-    {
-      "Year": 1993,
-      "NumberOfBoardMembers": 160,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Dr.",
-      "Count": 67,
-      "Percentage": 39
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Bachelor",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Master",
-      "Count": 42,
-      "Percentage": 24
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Fachexperte",
-      "Count": 20,
-      "Percentage": 12
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Dr., Prof.",
-      "Count": 22,
-      "Percentage": 13
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Berufsausbildung",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 1994,
-      "NumberOfBoardMembers": 173,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Dr.",
-      "Count": 63,
-      "Percentage": 37
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Bachelor",
-      "Count": 13,
-      "Percentage": 8
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Master",
-      "Count": 40,
-      "Percentage": 24
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Fachexperte",
-      "Count": 22,
-      "Percentage": 13
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Dr., Prof.",
-      "Count": 22,
-      "Percentage": 13
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Berufsausbildung",
-      "Count": 10,
-      "Percentage": 6
-    },
-    {
-      "Year": 1995,
-      "NumberOfBoardMembers": 170,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Dr.",
-      "Count": 69,
-      "Percentage": 39
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Bachelor",
-      "Count": 19,
-      "Percentage": 11
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Master",
-      "Count": 38,
-      "Percentage": 22
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Fachexperte",
-      "Count": 21,
-      "Percentage": 12
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Dr., Prof.",
-      "Count": 19,
-      "Percentage": 11
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Berufsausbildung",
-      "Count": 9,
-      "Percentage": 5
-    },
-    {
-      "Year": 1996,
-      "NumberOfBoardMembers": 175,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Dr.",
-      "Count": 64,
-      "Percentage": 38
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Bachelor",
-      "Count": 22,
-      "Percentage": 13
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Master",
-      "Count": 33,
-      "Percentage": 19
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Fachexperte",
-      "Count": 21,
-      "Percentage": 12
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Dr., Prof.",
-      "Count": 23,
-      "Percentage": 14
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Berufsausbildung",
-      "Count": 7,
-      "Percentage": 4
-    },
-    {
-      "Year": 1997,
-      "NumberOfBoardMembers": 170,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Dr.",
-      "Count": 58,
-      "Percentage": 33
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Bachelor",
-      "Count": 29,
-      "Percentage": 16
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Master",
-      "Count": 35,
-      "Percentage": 20
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Fachexperte",
-      "Count": 29,
-      "Percentage": 16
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Dr., Prof.",
-      "Count": 21,
-      "Percentage": 12
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Berufsausbildung",
-      "Count": 6,
-      "Percentage": 3
-    },
-    {
-      "Year": 1998,
-      "NumberOfBoardMembers": 178,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Dr.",
-      "Count": 55,
-      "Percentage": 31
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Bachelor",
-      "Count": 38,
-      "Percentage": 21
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Master",
-      "Count": 30,
-      "Percentage": 17
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Fachexperte",
-      "Count": 30,
-      "Percentage": 17
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Dr., Prof.",
-      "Count": 20,
-      "Percentage": 11
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Berufsausbildung",
-      "Count": 5,
-      "Percentage": 3
-    },
-    {
-      "Year": 1999,
-      "NumberOfBoardMembers": 178,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Dr.",
-      "Count": 62,
-      "Percentage": 29
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Bachelor",
-      "Count": 50,
-      "Percentage": 23
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Master",
-      "Count": 38,
-      "Percentage": 18
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Fachexperte",
-      "Count": 35,
-      "Percentage": 16
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Dr., Prof.",
-      "Count": 25,
-      "Percentage": 12
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Berufsausbildung",
-      "Count": 5,
-      "Percentage": 2
-    },
-    {
-      "Year": 2000,
-      "NumberOfBoardMembers": 215,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Dr.",
-      "Count": 55,
-      "Percentage": 28
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Bachelor",
-      "Count": 48,
-      "Percentage": 24
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Master",
-      "Count": 37,
-      "Percentage": 18
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Fachexperte",
-      "Count": 31,
-      "Percentage": 16
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Dr., Prof.",
-      "Count": 25,
-      "Percentage": 12
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Berufsausbildung",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2001,
-      "NumberOfBoardMembers": 200,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr.",
-      "Count": 50,
-      "Percentage": 26
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Bachelor",
-      "Count": 53,
-      "Percentage": 27
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Master",
-      "Count": 33,
-      "Percentage": 17
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte",
-      "Count": 28,
-      "Percentage": 15
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr., Prof.",
-      "Count": 25,
-      "Percentage": 13
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2002,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Dr.",
-      "Count": 53,
-      "Percentage": 27
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Bachelor",
-      "Count": 52,
-      "Percentage": 27
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Master",
-      "Count": 36,
-      "Percentage": 18
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Fachexperte",
-      "Count": 25,
-      "Percentage": 13
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Dr., Prof.",
-      "Count": 26,
-      "Percentage": 13
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Berufsausbildung",
-      "Count": 3,
-      "Percentage": 2
-    },
-    {
-      "Year": 2003,
-      "NumberOfBoardMembers": 195,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Dr.",
-      "Count": 60,
-      "Percentage": 29
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Bachelor",
-      "Count": 61,
-      "Percentage": 30
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Master",
-      "Count": 34,
-      "Percentage": 17
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Fachexperte",
-      "Count": 23,
-      "Percentage": 11
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Dr., Prof.",
-      "Count": 23,
-      "Percentage": 11
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Berufsausbildung",
-      "Count": 3,
-      "Percentage": 1
-    },
-    {
-      "Year": 2004,
-      "NumberOfBoardMembers": 204,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Dr.",
-      "Count": 56,
-      "Percentage": 28
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Bachelor",
-      "Count": 66,
-      "Percentage": 33
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Master",
-      "Count": 32,
-      "Percentage": 16
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Fachexperte",
-      "Count": 20,
-      "Percentage": 10
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Dr., Prof.",
-      "Count": 26,
-      "Percentage": 13
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Berufsausbildung",
-      "Count": 3,
-      "Percentage": 1
-    },
-    {
-      "Year": 2005,
-      "NumberOfBoardMembers": 203,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Dr.",
-      "Count": 60,
-      "Percentage": 27
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Bachelor",
-      "Count": 72,
-      "Percentage": 33
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Master",
-      "Count": 38,
-      "Percentage": 17
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Fachexperte",
-      "Count": 20,
-      "Percentage": 9
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Dr., Prof.",
-      "Count": 28,
-      "Percentage": 13
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Berufsausbildung",
-      "Count": 3,
-      "Percentage": 1
-    },
-    {
-      "Year": 2006,
-      "NumberOfBoardMembers": 221,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr.",
-      "Count": 52,
-      "Percentage": 27
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Bachelor",
-      "Count": 69,
-      "Percentage": 36
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Master",
-      "Count": 31,
-      "Percentage": 16
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte",
-      "Count": 19,
-      "Percentage": 10
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr., Prof.",
-      "Count": 22,
-      "Percentage": 11
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2007,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Dr.",
-      "Count": 51,
-      "Percentage": 26
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Bachelor",
-      "Count": 74,
-      "Percentage": 37
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Master",
-      "Count": 38,
-      "Percentage": 19
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Fachexperte",
-      "Count": 14,
-      "Percentage": 7
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Dr., Prof.",
-      "Count": 21,
-      "Percentage": 11
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Berufsausbildung",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2008,
-      "NumberOfBoardMembers": 198,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Dr.",
-      "Count": 45,
-      "Percentage": 24
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Bachelor",
-      "Count": 70,
-      "Percentage": 37
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Master",
-      "Count": 42,
-      "Percentage": 22
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Fachexperte",
-      "Count": 16,
-      "Percentage": 8
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Dr., Prof.",
-      "Count": 16,
-      "Percentage": 8
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2009,
-      "NumberOfBoardMembers": 191,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr.",
-      "Count": 46,
-      "Percentage": 24
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Bachelor",
-      "Count": 77,
-      "Percentage": 40
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Master",
-      "Count": 40,
-      "Percentage": 21
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte",
-      "Count": 15,
-      "Percentage": 8
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr., Prof.",
-      "Count": 13,
-      "Percentage": 7
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2010,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Dr.",
-      "Count": 50,
-      "Percentage": 25
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Bachelor",
-      "Count": 79,
-      "Percentage": 40
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Master",
-      "Count": 39,
-      "Percentage": 20
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Fachexperte",
-      "Count": 16,
-      "Percentage": 8
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Dr., Prof.",
-      "Count": 13,
-      "Percentage": 7
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Prof.",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2011,
-      "NumberOfBoardMembers": 199,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Dr.",
-      "Count": 55,
-      "Percentage": 27
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Bachelor",
-      "Count": 75,
-      "Percentage": 37
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Master",
-      "Count": 43,
-      "Percentage": 21
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Fachexperte",
-      "Count": 15,
-      "Percentage": 7
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Dr., Prof.",
-      "Count": 13,
-      "Percentage": 6
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Prof.",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2012,
-      "NumberOfBoardMembers": 204,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Dr.",
-      "Count": 59,
-      "Percentage": 29
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Bachelor",
-      "Count": 71,
-      "Percentage": 35
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Master",
-      "Count": 45,
-      "Percentage": 22
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Fachexperte",
-      "Count": 13,
-      "Percentage": 6
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Dr., Prof.",
-      "Count": 12,
-      "Percentage": 6
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Prof.",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2013,
-      "NumberOfBoardMembers": 203,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Dr.",
-      "Count": 53,
-      "Percentage": 28
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Bachelor",
-      "Count": 62,
-      "Percentage": 33
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Master",
-      "Count": 47,
-      "Percentage": 25
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Fachexperte",
-      "Count": 12,
-      "Percentage": 6
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Dr., Prof.",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Prof.",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2014,
-      "NumberOfBoardMembers": 188,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr.",
-      "Count": 48,
-      "Percentage": 24
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Bachelor",
-      "Count": 69,
-      "Percentage": 35
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Master",
-      "Count": 51,
-      "Percentage": 26
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr., Prof.",
-      "Count": 13,
-      "Percentage": 7
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Prof.",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2015,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr.",
-      "Count": 50,
-      "Percentage": 26
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Bachelor",
-      "Count": 62,
-      "Percentage": 32
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Master",
-      "Count": 54,
-      "Percentage": 28
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr., Prof.",
-      "Count": 14,
-      "Percentage": 7
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Prof.",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2016,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr.",
-      "Count": 47,
-      "Percentage": 24
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Bachelor",
-      "Count": 52,
-      "Percentage": 27
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Master",
-      "Count": 66,
-      "Percentage": 34
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte",
-      "Count": 12,
-      "Percentage": 6
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Dr., Prof.",
-      "Count": 14,
-      "Percentage": 7
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Prof.",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Berufsausbildung",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2017,
-      "NumberOfBoardMembers": 196,
-      "Education": "Fachexperte, Master",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr.",
-      "Count": 46,
-      "Percentage": 24
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Bachelor",
-      "Count": 43,
-      "Percentage": 22
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Master",
-      "Count": 74,
-      "Percentage": 38
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte",
-      "Count": 10,
-      "Percentage": 5
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Dr., Prof.",
-      "Count": 13,
-      "Percentage": 7
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Prof.",
-      "Count": 3,
-      "Percentage": 2
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Berufsausbildung",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2018,
-      "NumberOfBoardMembers": 193,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Dr.",
-      "Count": 48,
-      "Percentage": 24
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Bachelor",
-      "Count": 35,
-      "Percentage": 18
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Master",
-      "Count": 88,
-      "Percentage": 44
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Fachexperte",
-      "Count": 10,
-      "Percentage": 5
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Dr., Prof.",
-      "Count": 11,
-      "Percentage": 6
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Prof.",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2019,
-      "NumberOfBoardMembers": 199,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 1
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr.",
-      "Count": 49,
-      "Percentage": 23
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Bachelor",
-      "Count": 35,
-      "Percentage": 17
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Master",
-      "Count": 97,
-      "Percentage": 46
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte",
-      "Count": 10,
-      "Percentage": 5
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr., Prof.",
-      "Count": 10,
-      "Percentage": 5
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Prof.",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2020,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte, Master",
-      "Count": 2,
-      "Percentage": 1
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Dr.",
-      "Count": 47,
-      "Percentage": 23
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Bachelor",
-      "Count": 38,
-      "Percentage": 18
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Master",
-      "Count": 104,
-      "Percentage": 50
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Fachexperte",
-      "Count": 5,
-      "Percentage": 2
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Dr., Prof.",
-      "Count": 8,
-      "Percentage": 4
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Prof.",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2021,
-      "NumberOfBoardMembers": 208,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr.",
-      "Count": 46,
-      "Percentage": 22
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Bachelor",
-      "Count": 36,
-      "Percentage": 17
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Master",
-      "Count": 108,
-      "Percentage": 52
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr., Prof.",
-      "Count": 8,
-      "Percentage": 4
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Prof.",
-      "Count": 5,
-      "Percentage": 2
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2022,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr.",
-      "Count": 41,
-      "Percentage": 20
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Bachelor",
-      "Count": 32,
-      "Percentage": 15
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Master",
-      "Count": 117,
-      "Percentage": 56
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Dr., Prof.",
-      "Count": 7,
-      "Percentage": 3
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Prof.",
-      "Count": 6,
-      "Percentage": 3
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2023,
-      "NumberOfBoardMembers": 209,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Dr.",
-      "Count": 37,
-      "Percentage": 18
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Bachelor",
-      "Count": 25,
-      "Percentage": 12
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Master",
-      "Count": 120,
-      "Percentage": 60
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Fachexperte",
-      "Count": 4,
-      "Percentage": 2
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Dr., Prof.",
-      "Count": 7,
-      "Percentage": 3
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Prof.",
-      "Count": 6,
-      "Percentage": 3
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Berufsausbildung, Fachexperte",
-      "Count": 0,
-      "Percentage": 0
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Berufsausbildung",
-      "Count": 1,
-      "Percentage": 0
-    },
-    {
-      "Year": 2024,
-      "NumberOfBoardMembers": 201,
-      "Education": "Fachexperte, Master",
-      "Count": 1,
-      "Percentage": 0
     }
   ],
   "Nationalities": [
