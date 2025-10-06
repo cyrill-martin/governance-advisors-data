@@ -9,8 +9,8 @@ export const useAppStore = defineStore("app", () => {
   const years = ref([])
 
   // const colors = ref(["#FFEB84", "#4682B4", "#191970"])
-  // const colors = ref(["#fdfcfcff", "#bdbdbd", "#636363"])
-  const colors = ref(["#fde725", "#21908d", "#440154"])
+  const colors = ref(["#ffffff", "#b0b0b0", "#202020"])
+  // const colors = ref(["#fde725", "#21908d", "#440154"])
 
   const selectedVariable = ref(null)
   const absoluteValues = ref(false)
