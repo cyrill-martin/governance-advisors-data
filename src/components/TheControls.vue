@@ -16,9 +16,9 @@ const selectedValue = computed({
   set: (value) => (appStore.selectedVariable = value),
 })
 
-const percentageValues = computed({
-  get: () => appStore.percentageValues,
-  set: (value) => (appStore.percentageValues = value),
+const absoluteValues = computed({
+  get: () => appStore.absoluteValues,
+  set: (value) => (appStore.absoluteValues = value),
 })
 
 const yearsRange = computed({
@@ -59,8 +59,8 @@ const flexAlignment = computed(() => {
       <n-flex vertical align="start">
         <label v-if="!screenSize.isMobile">&nbsp;</label>
         <n-flex>
-          <n-switch v-model:value="percentageValues" />
-          <span :class="{ inactive: !percentageValues }">Show %</span>
+          <n-switch v-model:value="absoluteValues" />
+          <span :class="{ inactive: !absoluteValues }">Absolute values</span>
         </n-flex>
       </n-flex>
     </div>

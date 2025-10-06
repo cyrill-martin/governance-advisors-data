@@ -76,11 +76,12 @@ async function updateAxes(type) {
 async function setVizDimensions(element) {
   vizDimensions.value.width = element.node().getBoundingClientRect().width
 
-  const heightFactor = screenSize.isMobile ? 1.5 : 0.25
+  const heightFactor = screenSize.isMobile ? 1.75 : 0.25
 
-  vizDimensions.value.height = vizDimensions.value.width * heightFactor
+  // vizDimensions.value.height = vizDimensions.value.width * heightFactor
+  vizDimensions.value.height = screenSize.width * heightFactor
 
-  vizDimensions.value.margin.top = screenSize.isMobile ? 150 : 10
+  vizDimensions.value.margin.top = screenSize.isMobile ? 155 : 10
   vizDimensions.value.margin.right = 10
   vizDimensions.value.margin.bottom = screenSize.isMobile ? 10 : 40
   vizDimensions.value.margin.left = 10
@@ -133,17 +134,20 @@ watch(
     if (!appStore.allSet) return
 
     variableDomain.value = await getVariableDomain()
+    colorDomain.value = await getColorDomain()
+    await setColorScale()
     await updateAxes("variable")
     await drawRectangles()
   },
 )
 
 watch(
-  () => appStore.percentageValues,
+  () => appStore.absoluteValues,
   async () => {
     if (!appStore.allSet) return
 
     colorDomain.value = await getColorDomain()
+    await setColorScale()
     await drawRectangles()
   },
 )
@@ -182,13 +186,19 @@ async function getVariableDomain() {
 async function getColorDomain() {
   if (!appStore.selectedVariable) return null
 
-  if (appStore.percentageValues) {
-    return [0, 50, 100]
-  } else {
+  if (appStore.absoluteValues) {
     const minMax = d3.extent(
       appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count),
     )
-    const midValue = minMax[0] + minMax[1] / 2
+    const midValue = (minMax[0] + minMax[1]) / 2
+
+    return [minMax[0], midValue, minMax[1]]
+  } else {
+    const minMax = d3.extent(
+      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Percentage),
+    )
+    const midValue = (minMax[0] + minMax[1]) / 2
+
     return [minMax[0], midValue, minMax[1]]
   }
 }
@@ -282,7 +292,7 @@ async function updateYaxis() {
 }
 
 async function setColorScale() {
-  colorScale.value = d3.scaleLinear().range(appStore.colors).domain(colorDomain.value)
+  colorScale.value = d3.scaleLinear().domain(colorDomain.value).range(appStore.colors)
 }
 
 function accessorHelper(variable, value) {
@@ -304,7 +314,7 @@ function yAccessor(d) {
 }
 
 function colorAccessor(d) {
-  return appStore.percentageValues ? colorScale.value(d.Percentage) : colorScale.value(d.Count)
+  return appStore.absoluteValues ? colorScale.value(d.Count) : colorScale.value(d.Percentage)
 }
 
 async function drawRectangles() {
@@ -347,14 +357,19 @@ async function drawRectangles() {
 }
 
 function addMouseover(d) {
-  tooltip.value.select(".year").text(d.Year)
-  tooltip.value
-    .select(".variable")
-    .text(t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`))
+  const year = d.Year
+  const variable = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
 
-  const label = appStore.percentageValues ? "%" : " board members"
-  const value = appStore.percentageValues ? d.Percentage : d.Count
-  tooltip.value.select(".value").text(`${value}${label}`)
+  tooltip.value.select(".year-variable").text(`${year} - ${variable}:`)
+
+  const value = appStore.absoluteValues ? d.Count : d.Percentage
+
+  if (appStore.absoluteValues) {
+    const label = d.Count === 1 ? "board member" : "board members"
+    tooltip.value.select(".value").text(`${value} ${label}`)
+  } else {
+    tooltip.value.select(".value").text(`${value}% of board members`)
+  }
 
   tooltip.value.style("visibility", "visible")
 }
@@ -370,16 +385,14 @@ function hideTooltip() {
 
 <template>
   <div id="tooltip">
-    <div class="year"></div>
-    <div class="variable"></div>
-    <div>&nbsp;</div>
+    <div class="year-variable"></div>
     <div class="value"></div>
   </div>
 </template>
 
 <style scoped>
 #tooltip {
-  text-align: center;
+  text-align: left;
   visibility: hidden;
   position: fixed;
   z-index: 10;

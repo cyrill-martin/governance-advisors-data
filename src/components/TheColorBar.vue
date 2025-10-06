@@ -35,6 +35,7 @@ const colorScale = ref(null)
 const colorAxis = ref(null)
 
 async function drawLegend() {
+  d3.select("#svg-color-bar").remove()
   colorDomain.value = await getColorDomain()
 
   await initiateSvg()
@@ -90,22 +91,43 @@ async function initiateSvg() {
     )
 }
 
+watch(
+  () => appStore.selectedVariable,
+  async () => {
+    if (!appStore.mapDrawn) return
+    drawLegend()
+  },
+)
+
+watch(
+  () => appStore.absoluteValues,
+  async () => {
+    if (!appStore.mapDrawn) return
+    drawLegend()
+  },
+)
+
 async function getColorDomain() {
   if (!appStore.selectedVariable) return null
 
-  if (appStore.percentageValues) {
-    return [0, 100]
-  } else {
+  if (appStore.absoluteValues) {
     const minMax = d3.extent(
       appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count),
+    )
+    return [minMax[0], minMax[1]]
+  } else {
+    const minMax = d3.extent(
+      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Percentage),
     )
     return [minMax[0], minMax[1]]
   }
 }
 
+const xTranslationAxis = screenSize.isMobile ? 25 : 65
+
 async function setColorScale() {
   const xTranslation = screenSize.isMobile ? 0 : legendDimensions.value.ctrHeight
-  const yTranslation = screenSize.isMobile ? legendDimensions.value.ctrWidth : 0
+  const yTranslation = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslationAxis : 0
 
   colorScale.value = d3
     .scaleLinear()
@@ -113,10 +135,6 @@ async function setColorScale() {
     .domain(colorDomain.value)
     .nice()
 }
-
-const xTranslationAxis = screenSize.isMobile ? 25 : 65
-const gradientBarWidth = screenSize.isMobile ? legendDimensions.value.ctrWidth : 30
-const xTranslationGradientBar = xTranslationAxis - gradientBarWidth
 
 async function drawColorAxis() {
   const axisCall = screenSize.isMobile
@@ -133,18 +151,37 @@ async function drawColorAxis() {
 }
 
 async function drawColorBar() {
+  const gradientBarWidth = screenSize.isMobile
+    ? legendDimensions.value.ctrWidth - xTranslationAxis
+    : 30
+  const gradientBarHeight = screenSize.isMobile ? 25 : legendDimensions.value.ctrHeight
+  const xTranslationGradientBar = screenSize.isMobile
+    ? xTranslationAxis
+    : xTranslationAxis - gradientBarWidth
+
   let gradient = svg.value.select("#legendGradient")
 
   if (gradient.empty()) {
     // Create a linear gradient if it doesn't exist
     const defs = svg.value.append("defs")
-    gradient = defs
-      .append("linearGradient")
-      .attr("id", "legendGradient")
-      .attr("x1", "50%")
-      .attr("x2", "50%")
-      .attr("y1", "0%")
-      .attr("y2", "100%")
+
+    if (!screenSize.isMobile) {
+      gradient = defs
+        .append("linearGradient")
+        .attr("id", "legendGradient")
+        .attr("x1", "50%")
+        .attr("x2", "50%")
+        .attr("y1", "0%")
+        .attr("y2", "100%")
+    } else {
+      gradient = defs
+        .append("linearGradient")
+        .attr("id", "legendGradient")
+        .attr("x1", "100%")
+        .attr("x2", "0%")
+        .attr("y1", "50%")
+        .attr("y2", "50%")
+    }
 
     // Add color stops to the gradient
     gradient.append("stop").attr("offset", "0%").attr("stop-color", appStore.colors[2])
@@ -152,20 +189,15 @@ async function drawColorBar() {
     gradient.append("stop").attr("offset", "100%").attr("stop-color", appStore.colors[0])
   }
 
-  const colorBarTransition = d3.transition().duration(500) // AND HERE
-
   ctr.value
     .append("rect")
     .attr("id", "gradient-bar")
     .attr("x", xTranslationGradientBar)
     .attr("y", 0)
     .attr("width", gradientBarWidth)
-    .transition(colorBarTransition)
-    .attr("height", legendDimensions.value.ctrHeight)
+    .attr("height", gradientBarHeight)
     .style("fill", "url(#legendGradient)")
 }
-
-// function updateLegend() {
-//   colorScale.value.domain(colorDomain.value)
-// }
 </script>
+
+<template><div></div></template>

@@ -8,10 +8,12 @@ export const useAppStore = defineStore("app", () => {
   const variables = ref([])
   const years = ref([])
 
-  const colors = ref(["#FFEB84", "#4682B4", "#191970"])
+  // const colors = ref(["#FFEB84", "#4682B4", "#191970"])
+  // const colors = ref(["#fdfcfcff", "#bdbdbd", "#636363"])
+  const colors = ref(["#fde725", "#21908d", "#440154"])
 
   const selectedVariable = ref(null)
-  const percentageValues = ref(false)
+  const absoluteValues = ref(false)
   const selectedYearsRange = ref([])
 
   const allSet = ref(false)
@@ -31,15 +33,16 @@ export const useAppStore = defineStore("app", () => {
   }
 
   async function getBoardMembers() {
+    const timestamp = Date.now()
     try {
-      const response = await fetch("/data/boardMembers-b.json")
+      const response = await fetch(`/data/boardMembers.json?v=${timestamp}`)
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json()
-      console.log("Board data loaded:", data)
+      console.log("Board data loaded")
 
       boardMembers.value = data
     } catch (error) {
@@ -95,7 +98,7 @@ export const useAppStore = defineStore("app", () => {
     selectedVariable,
     selectedYearsRange,
     allSet,
-    percentageValues,
+    absoluteValues,
     colors,
     mapDrawn,
   }

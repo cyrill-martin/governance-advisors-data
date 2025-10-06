@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from "vue"
 import { NFlex } from "naive-ui"
 import TheControls from "@/components/TheControls.vue"
 import TheHeatMap from "@/components/TheHeatMap.vue"
@@ -8,6 +9,10 @@ import TheLegendTitle from "@/components/TheLegendTitle.vue"
 import { useScreenStore } from "@/stores/screen.js"
 
 const screenSize = useScreenStore()
+
+const mainHeight = computed(() => {
+  return screenSize.isMobile ? screenSize.width * 1.75 : screenSize.width * 0.25
+})
 </script>
 
 <template>
@@ -29,7 +34,7 @@ const screenSize = useScreenStore()
       </n-flex>
     </div>
     <n-flex :style="{ flexDirection: screenSize.isMobile ? 'column-reverse' : 'row' }">
-      <div class="flex-map" id="heat-map">
+      <div class="flex-map" id="heat-map" :style="{ height: mainHeight + 'px' }">
         <TheHeatMap />
       </div>
       <div class="flex-bar" id="color-bar">
@@ -40,10 +45,16 @@ const screenSize = useScreenStore()
 </template>
 
 <style scoped>
-.flex-map {
-  flex: 9;
-}
+.flex-map,
 .flex-bar {
-  flex: 1;
+  flex: auto;
+}
+@media (min-width: 1000px) {
+  .flex-map {
+    flex: 9;
+  }
+  .flex-bar {
+    flex: 1;
+  }
 }
 </style>

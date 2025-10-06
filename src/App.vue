@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, defineAsyncComponent } from "vue"
 import { useAppStore } from "@/stores/app.js"
-
 import { NConfigProvider, NMessageProvider, NFlex } from "naive-ui"
 import { RouterView } from "vue-router"
 import { naiveUithemeOverrides } from "@/utils/naiveUI/naiveUithemeOverrides.js"
@@ -36,7 +35,19 @@ onMounted(() => {
 
 <style scoped>
 .app-container {
-  min-height: 100vh; /* Container has at leas 100% viewport height */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main > * {
+  flex-grow: 1;
 }
 
 header {
@@ -44,11 +55,11 @@ header {
 }
 
 main {
-  flex-grow: 1; /* Main content expands to fill any remaining space */
   padding: 1rem 2rem;
 }
 
 footer {
-  padding: 2rem;
+  padding: 1rem;
+  text-align: center;
 }
 </style>
