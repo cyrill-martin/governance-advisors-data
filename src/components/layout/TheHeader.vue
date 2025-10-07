@@ -77,7 +77,7 @@ function handleAbout() {
 
 <style scoped>
 .home-link {
-  flex: 4;
+  flex: 1;
   display: flex;
 }
 

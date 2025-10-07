@@ -184,12 +184,6 @@ async function getVariableDomain() {
     data = data.sort((a, b) => b.Count - a.Count)
   }
 
-  // else {
-  //   data = data.sort((a, b) =>
-  //     a[appStore.selectedVariable].localeCompare(b[appStore.selectedVariable]),
-  //   )
-  // }
-
   const seen = new Set()
   const result = data
     .map((obj) => t(`variables.${appStore.selectedVariable}.${obj[appStore.selectedVariable]}`))
