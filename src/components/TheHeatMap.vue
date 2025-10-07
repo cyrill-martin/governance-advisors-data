@@ -93,7 +93,7 @@ async function setVizDimensions(element) {
     vizDimensions.value.height - vizDimensions.value.margin.top - vizDimensions.value.margin.bottom
 }
 
-const pointZero = screenSize.isMobile ? 25 : 260
+const pointZero = screenSize.isMobile ? 25 : 170
 
 // Setting up the SVG
 async function initiateSvg() {

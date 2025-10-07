@@ -18,5 +18,9 @@ const heatMapTitle = computed(() => {
 </script>
 
 <template>
-  <h3>{{ heatMapTitle }}</h3>
+  <div>
+    <h3>{{ heatMapTitle }}</h3>
+  </div>
 </template>
+
+<style scoped></style>

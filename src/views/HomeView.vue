@@ -20,13 +20,15 @@ const mainHeight = computed(() => {
     <div>
       <h1>Board of Directors</h1>
     </div>
-    <div>
+    <div class="controls">
       <TheControls />
     </div>
-    <div>
+    <div class="titles">
       <n-flex :vertical="screenSize.isMobile">
         <div class="flex-map">
-          <TheHeatMapTitle />
+          <div class="center-trick">
+            <TheHeatMapTitle />
+          </div>
         </div>
         <div class="flex-bar">
           <TheLegendTitle />
@@ -45,16 +47,19 @@ const mainHeight = computed(() => {
 </template>
 
 <style scoped>
-.flex-map,
-.flex-bar {
-  flex: auto;
-}
 @media (min-width: 1000px) {
+  .controls {
+    margin-bottom: 3rem;
+  }
   .flex-map {
     flex: 9;
   }
   .flex-bar {
     flex: 1;
+  }
+  .center-trick {
+    position: relative;
+    left: 180px;
   }
 }
 </style>

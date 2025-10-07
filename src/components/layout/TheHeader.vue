@@ -34,7 +34,7 @@ function handleAbout() {
   <n-drawer v-model:show="showAbout" :width="drawerWidth">
     <n-drawer-content closable>
       <div>
-        <h3>The Data</h3>
+        <h3>Data</h3>
         The data presented on this website is based on companies listed in the
         <a
           href="https://www.six-group.com/en/market-data/indices/switzerland/equity/smi.html"
@@ -47,7 +47,7 @@ function handleAbout() {
         boards) in the SMI in 1988 is used.
       </div>
       <div>
-        <h4>Number of SMI Companies over the Years</h4>
+        <h4>Number of SMI Companies per Year</h4>
         <img
           class="chart"
           :src="chart"
