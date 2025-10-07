@@ -51,7 +51,7 @@ const flexAlignment = computed(() => {
   >
     <div class="flex-1 select">
       <n-flex vertical>
-        <label>Variable</label>
+        <label>{{ $t("controls.select") }}</label>
         <n-select v-model:value="selectedValue" :options="options" />
       </n-flex>
     </div>
@@ -60,13 +60,13 @@ const flexAlignment = computed(() => {
         <label v-if="!screenSize.isMobile">&nbsp;</label>
         <n-flex>
           <n-switch v-model:value="absoluteValues" />
-          <span :class="{ inactive: !absoluteValues }">Absolute values</span>
+          <span :class="{ inactive: !absoluteValues }">{{ $t("controls.toggle") }}</span>
         </n-flex>
       </n-flex>
     </div>
     <div class="flex-1 slider">
       <n-flex vertical>
-        <label>Years</label>
+        <label>{{ $t("controls.slider") }}</label>
         <n-slider
           v-model:value="yearsRange"
           range

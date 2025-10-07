@@ -2,8 +2,9 @@
 import logo from "@/assets/images/ga_logo.png"
 import chart from "@/assets/images/smi_number_of_companies_until2024.png"
 import { ref, computed } from "vue"
-import { NFlex, NDrawer, NDrawerContent } from "naive-ui"
+import { NFlex, NDrawer, NDrawerContent, NIcon } from "naive-ui"
 import { useScreenStore } from "@/stores/screen.js"
+import { InfoOutlined } from "@vicons/material"
 
 const screenSize = useScreenStore()
 
@@ -21,13 +22,16 @@ function handleAbout() {
 <template>
   <n-flex align="center">
     <div class="home-link">
-      <a href="https://governance-advisors.ch/daten/#" target="_blank">
+      <a href="https://governance-advisors.ch" target="_blank">
         <img :src="logo" alt="The Governance Advisors logo" />
       </a>
     </div>
     <div class="navigation">
       <nav @click="handleAbout">
-        {{ $t("header.navigation.about") }}
+        <n-flex align="center" :size="5">
+          <n-icon :size="22"><InfoOutlined /></n-icon
+          ><span>{{ $t("header.navigation.about") }}</span>
+        </n-flex>
       </nav>
     </div>
   </n-flex>

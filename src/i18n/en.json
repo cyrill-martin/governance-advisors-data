@@ -1,5 +1,9 @@
 {
-  "header.navigation.about": "About",
+  "home.title": "Director Characteristics of SMI Boards",
+  "header.navigation.about": "About the data",
+  "controls.select": "Characteristic",
+  "controls.toggle": "Absolute values",
+  "controls.slider": "Years",
   "variables.Gender": "Gender",
   "variables.Experiences": "Skills",
   "variables.Age_d": "Over 60 Years Old",

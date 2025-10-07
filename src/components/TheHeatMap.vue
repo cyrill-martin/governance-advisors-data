@@ -171,16 +171,39 @@ async function getYearsDomain() {
   return screenSize.isMobile ? yearsDomain.reverse() : yearsDomain
 }
 
+const sortByValue = ["Gender", "Experiences", "Age_d", "Specializations", "Nationalities"]
+
 async function getVariableDomain() {
   if (!appStore.selectedVariable) return null
 
-  return [
-    ...new Set(
-      appStore.boardMembers[appStore.selectedVariable].map((obj) =>
-        t(`variables.${appStore.selectedVariable}.${obj[appStore.selectedVariable]}`),
-      ),
-    ),
-  ]
+  let data = appStore.boardMembers[appStore.selectedVariable]
+  const maxYear = d3.max(data, (d) => d.Year)
+  data = data.filter((obj) => obj.Year === maxYear)
+
+  if (sortByValue.includes(appStore.selectedVariable)) {
+    data = data.sort((a, b) => b.Count - a.Count)
+  }
+
+  // else {
+  //   data = data.sort((a, b) =>
+  //     a[appStore.selectedVariable].localeCompare(b[appStore.selectedVariable]),
+  //   )
+  // }
+
+  const seen = new Set()
+  const result = data
+    .map((obj) => t(`variables.${appStore.selectedVariable}.${obj[appStore.selectedVariable]}`))
+    .filter((val) => {
+      if (seen.has(val)) return false
+      seen.add(val)
+      return true
+    })
+
+  if (!sortByValue.includes(appStore.selectedVariable)) {
+    result.sort((a, b) => a.localeCompare(b))
+  }
+
+  return result
 }
 
 async function getColorDomain() {
@@ -358,18 +381,17 @@ async function drawRectangles() {
 
 function addMouseover(d) {
   const year = d.Year
-  const variable = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
+  const characteristic = t(`variables.${appStore.selectedVariable}`)
+  const total = d.NumberOfBoardMembers
+  const category = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
 
-  tooltip.value.select(".year-variable").text(`${year} - ${variable}:`)
+  tooltip.value.select(".title").text(`${characteristic} (${year})`).style("font-weight", "bold")
+  tooltip.value.select(".total").text(`${total} people in total`)
 
-  const value = appStore.absoluteValues ? d.Count : d.Percentage
+  const valueAbs = d.Count
+  const valueRel = d.Percentage
 
-  if (appStore.absoluteValues) {
-    const label = d.Count === 1 ? "board member" : "board members"
-    tooltip.value.select(".value").text(`${value} ${label}`)
-  } else {
-    tooltip.value.select(".value").text(`${value}% of board members`)
-  }
+  tooltip.value.select(".category-and-value").text(`${category}: ${valueAbs} people (${valueRel}%)`)
 
   tooltip.value.style("visibility", "visible")
 }
@@ -385,8 +407,10 @@ function hideTooltip() {
 
 <template>
   <div id="tooltip">
-    <div class="year-variable"></div>
-    <div class="value"></div>
+    <div class="title"></div>
+    <div class="total"></div>
+    <br />
+    <div class="category-and-value"></div>
   </div>
 </template>
 

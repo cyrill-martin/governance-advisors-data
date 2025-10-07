@@ -18,7 +18,11 @@ const mainHeight = computed(() => {
 <template>
   <n-flex vertical>
     <div>
-      <h1>Board of Directors</h1>
+      <h1>{{ $t("home.title") }}</h1>
+      <p>
+        Explore how the composition of SMI boards has evolved over time.<br />
+        Use the controls below to focus on different characteristics and years.
+      </p>
     </div>
     <div class="controls">
       <TheControls />
