@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from "vue"
+import { ref, watch, computed } from "vue"
 import d3 from "@/d3-importer.js"
 import { useScreenStore } from "@/stores/screen.js"
 import { useAppStore } from "@/stores/app.js"
@@ -9,8 +9,8 @@ const appStore = useAppStore()
 
 watch(
   () => appStore.mapDrawn,
-  () => {
-    drawLegend()
+  (newValue) => {
+    if (newValue) drawLegend()
   },
 )
 
@@ -123,12 +123,17 @@ async function getColorDomain() {
   }
 }
 
-const xTranslation = screenSize.isMobile ? 25 : 0
-const colorBarDimension = screenSize.isMobile ? 25 : 30
+const xTranslation = computed(() => {
+  return screenSize.isMobile ? 25 : 0
+})
+
+const colorBarDimension = computed(() => {
+  return screenSize.isMobile ? 25 : 30
+})
 
 async function setColorScale() {
   const xRange = screenSize.isMobile ? 0 : legendDimensions.value.ctrHeight
-  const yRange = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslation : 0
+  const yRange = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslation.value : 0
 
   colorScale.value = d3.scaleLinear().range([xRange, yRange]).domain(colorDomain.value).nice()
 }
@@ -140,14 +145,16 @@ async function drawColorAxis() {
 
   colorAxis.value = ctr.value
     .append("g")
-    .attr("transform", `translate(${colorBarDimension}, 0)`)
+    .attr("transform", `translate(${colorBarDimension.value}, 0)`)
     .style("font-size", () => (screenSize.isMobile ? "10px" : "14px"))
 
   colorAxis.value.call(axisCall)
 }
 
 async function drawColorBar() {
-  const gradientBarWidth = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslation : 30
+  const gradientBarWidth = screenSize.isMobile
+    ? legendDimensions.value.ctrWidth - xTranslation.value
+    : 30
   const gradientBarHeight = screenSize.isMobile ? 25 : legendDimensions.value.ctrHeight
 
   let gradient = svg.value.select("#legendGradient")
@@ -183,7 +190,7 @@ async function drawColorBar() {
   ctr.value
     .append("rect")
     .attr("id", "gradient-bar")
-    .attr("x", xTranslation)
+    .attr("x", xTranslation.value)
     .attr("y", 0)
     .attr("width", gradientBarWidth)
     .attr("height", gradientBarHeight)

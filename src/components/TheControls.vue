@@ -44,7 +44,7 @@ const flexAlignment = computed(() => {
 
 <template>
   <n-flex
-    v-if="appStore.allSet"
+    v-if="appStore.mapDrawn"
     :size="flexSize"
     :align="flexAlignment"
     :vertical="screenSize.isMobile"

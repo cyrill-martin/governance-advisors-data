@@ -4,6 +4,7 @@ import d3 from "@/d3-importer.js"
 import { useScreenStore } from "@/stores/screen.js"
 import { useAppStore } from "@/stores/app.js"
 import { useI18n } from "vue-i18n"
+import { debounce } from "@/utils/screen/debounce.js"
 
 const screenSize = useScreenStore()
 const appStore = useAppStore()
@@ -19,6 +20,23 @@ watch(
     drawHeatMap()
   },
 )
+
+// Handle screen resizing //////////////////////////////////////////
+watch(
+  () => screenSize.width,
+  () => {
+    debouncedRecreate()
+  },
+)
+
+const debouncedRecreate = debounce(() => {
+  reDrawViz()
+}, 1200)
+
+function reDrawViz() {
+  d3.select("#svg-visualization").remove()
+  drawHeatMap()
+}
 
 const tooltip = ref(null)
 
@@ -51,6 +69,8 @@ const yAxis = ref(null)
 const colorScale = ref(null)
 
 async function drawHeatMap() {
+  appStore.mapDrawn = false
+
   yearsDomain.value = await getYearsDomain()
   variableDomain.value = await getVariableDomain()
   colorDomain.value = await getColorDomain()
@@ -78,7 +98,6 @@ async function setVizDimensions(element) {
 
   const heightFactor = screenSize.isMobile ? 1.75 : 0.25
 
-  // vizDimensions.value.height = vizDimensions.value.width * heightFactor
   vizDimensions.value.height = screenSize.width * heightFactor
 
   vizDimensions.value.margin.top = screenSize.isMobile ? 155 : 10
@@ -93,7 +112,9 @@ async function setVizDimensions(element) {
     vizDimensions.value.height - vizDimensions.value.margin.top - vizDimensions.value.margin.bottom
 }
 
-const pointZero = screenSize.isMobile ? 25 : 170
+const pointZero = computed(() => {
+  return screenSize.isMobile ? 25 : 170
+})
 
 // Setting up the SVG
 async function initiateSvg() {
@@ -239,7 +260,7 @@ async function setXScale() {
   xScale.value = d3
     .scaleBand()
     .domain(xDomain.value)
-    .range([pointZero, vizDimensions.value.ctrWidth])
+    .range([pointZero.value, vizDimensions.value.ctrWidth])
     .align(0.5)
 }
 
@@ -299,7 +320,7 @@ async function drawYaxis() {
   yAxis.value = ctr.value
     .append("g")
     .attr("id", "y-axis")
-    .attr("transform", `translate(${pointZero}, 0)`)
+    .attr("transform", `translate(${pointZero.value}, 0)`)
     .style("font-size", () => (screenSize.isMobile ? "10px" : "14px"))
     .call(d3.axisLeft(yScale.value).tickSize(0).tickPadding(8))
 }
