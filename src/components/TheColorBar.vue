@@ -57,7 +57,7 @@ async function setLegendDimensions() {
   legendDimensions.value.margin.top = screenSize.isMobile ? 20 : 10
   legendDimensions.value.margin.right = 10
   legendDimensions.value.margin.bottom = screenSize.isMobile ? 10 : 40
-  legendDimensions.value.margin.left = 10
+  legendDimensions.value.margin.left = 0
 
   legendDimensions.value.ctrWidth =
     legendDimensions.value.width -
@@ -123,17 +123,14 @@ async function getColorDomain() {
   }
 }
 
-const xTranslationAxis = screenSize.isMobile ? 25 : 65
+const xTranslation = screenSize.isMobile ? 25 : 0
+const colorBarDimension = screenSize.isMobile ? 25 : 30
 
 async function setColorScale() {
-  const xTranslation = screenSize.isMobile ? 0 : legendDimensions.value.ctrHeight
-  const yTranslation = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslationAxis : 0
+  const xRange = screenSize.isMobile ? 0 : legendDimensions.value.ctrHeight
+  const yRange = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslation : 0
 
-  colorScale.value = d3
-    .scaleLinear()
-    .range([xTranslation, yTranslation])
-    .domain(colorDomain.value)
-    .nice()
+  colorScale.value = d3.scaleLinear().range([xRange, yRange]).domain(colorDomain.value).nice()
 }
 
 async function drawColorAxis() {
@@ -143,21 +140,15 @@ async function drawColorAxis() {
 
   colorAxis.value = ctr.value
     .append("g")
-    .attr("id", "colorAxis")
-    .attr("transform", `translate(${xTranslationAxis}, 0)`)
+    .attr("transform", `translate(${colorBarDimension}, 0)`)
     .style("font-size", () => (screenSize.isMobile ? "10px" : "14px"))
 
   colorAxis.value.call(axisCall)
 }
 
 async function drawColorBar() {
-  const gradientBarWidth = screenSize.isMobile
-    ? legendDimensions.value.ctrWidth - xTranslationAxis
-    : 30
+  const gradientBarWidth = screenSize.isMobile ? legendDimensions.value.ctrWidth - xTranslation : 30
   const gradientBarHeight = screenSize.isMobile ? 25 : legendDimensions.value.ctrHeight
-  const xTranslationGradientBar = screenSize.isMobile
-    ? xTranslationAxis
-    : xTranslationAxis - gradientBarWidth
 
   let gradient = svg.value.select("#legendGradient")
 
@@ -192,7 +183,7 @@ async function drawColorBar() {
   ctr.value
     .append("rect")
     .attr("id", "gradient-bar")
-    .attr("x", xTranslationGradientBar)
+    .attr("x", xTranslation)
     .attr("y", 0)
     .attr("width", gradientBarWidth)
     .attr("height", gradientBarHeight)

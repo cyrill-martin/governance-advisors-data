@@ -82,7 +82,7 @@ async function setVizDimensions(element) {
   vizDimensions.value.height = screenSize.width * heightFactor
 
   vizDimensions.value.margin.top = screenSize.isMobile ? 155 : 10
-  vizDimensions.value.margin.right = 10
+  vizDimensions.value.margin.right = screenSize.isMobile ? 10 : 25
   vizDimensions.value.margin.bottom = screenSize.isMobile ? 10 : 40
   vizDimensions.value.margin.left = 10
 
@@ -171,7 +171,7 @@ async function getYearsDomain() {
   return screenSize.isMobile ? yearsDomain.reverse() : yearsDomain
 }
 
-const sortByValue = ["Gender", "Experiences", "Age_d", "Specializations", "Nationalities"]
+const sortByValue = ["Gender", "Experience", "Specialization", "Nationality", "Independence"]
 
 async function getVariableDomain() {
   if (!appStore.selectedVariable) return null
@@ -182,6 +182,9 @@ async function getVariableDomain() {
 
   if (sortByValue.includes(appStore.selectedVariable)) {
     data = data.sort((a, b) => b.Count - a.Count)
+  } else {
+    // This sorts by Volonté's variable names which works fine here but might fail in other cases
+    data = data.sort((a, b) => a[appStore.selectedVariable] - b[appStore.selectedVariable])
   }
 
   const seen = new Set()
@@ -193,9 +196,9 @@ async function getVariableDomain() {
       return true
     })
 
-  if (!sortByValue.includes(appStore.selectedVariable)) {
-    result.sort((a, b) => a.localeCompare(b))
-  }
+  // if (!sortByValue.includes(appStore.selectedVariable)) {
+  //   result.sort((a, b) => a.localeCompare(b))
+  // }
 
   return result
 }
@@ -364,13 +367,18 @@ async function drawRectangles() {
     .attr("width", xScale.value.bandwidth())
     .attr("height", yScale.value.bandwidth())
     .attr("stroke", "black")
+    .attr("stroke-width", 1)
     .attr("fill", (d) => colorAccessor(d))
-    .attr("cursor", "pointer")
-    .on("mouseover", (_, d) => {
+    // .attr("cursor", "pointer")
+    .on("mouseover", function (_, d) {
+      d3.select(this).attr("stroke-width", 2.5).raise()
       addMouseover(d)
     })
     .on("mousemove", (event) => handleMouseMove(event))
-    .on("mouseout", () => hideTooltip())
+    .on("mouseout", function () {
+      d3.select(this).attr("stroke-width", 1)
+      hideTooltip()
+    })
 }
 
 function addMouseover(d) {
@@ -380,18 +388,21 @@ function addMouseover(d) {
   const category = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
 
   tooltip.value.select(".title").text(`${characteristic} (${year})`).style("font-weight", "bold")
-  tooltip.value.select(".total").text(`${total} people in total`)
+  tooltip.value.select(".total").text(`${total} directors in total`)
 
   const valueAbs = d.Count
   const valueRel = d.Percentage
+  const label = d.Count === 1 ? "director" : "directors"
 
-  tooltip.value.select(".category-and-value").text(`${category}: ${valueAbs} people (${valueRel}%)`)
+  tooltip.value
+    .select(".category-and-value")
+    .text(`${category}: ${valueAbs} ${label} (${valueRel}%)`)
 
   tooltip.value.style("visibility", "visible")
 }
 
 function handleMouseMove(event) {
-  tooltip.value.style("left", `${event.clientX + 15}px`).style("top", `${event.clientY - 60}px`)
+  tooltip.value.style("left", `${event.clientX + 30}px`).style("top", `${event.clientY - 80}px`)
 }
 
 function hideTooltip() {
@@ -414,8 +425,9 @@ function hideTooltip() {
   visibility: hidden;
   position: fixed;
   z-index: 10;
-  background-color: rgba(247, 247, 247, 0.85);
+  background-color: rgba(247, 247, 247, 0.9);
   border-radius: 4px;
+  /* border: solid 2.5px black; */
   padding: 5px;
   font-size: 14px;
 }
