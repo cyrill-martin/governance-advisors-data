@@ -3,8 +3,8 @@ import { defineAsyncComponent } from "vue"
 import { NConfigProvider, NMessageProvider, NFlex } from "naive-ui"
 import { RouterView } from "vue-router"
 import { naiveUithemeOverrides } from "@/utils/naiveUI/naiveUithemeOverrides.js"
+import TheUrlHandler from "@/components/TheUrlHandler.vue"
 
-const TheUrlHandler = defineAsyncComponent(() => import("@/components/TheUrlHandler.vue"))
 const TheHeader = defineAsyncComponent(() => import("@/components/layout/TheHeader.vue"))
 const TheFooter = defineAsyncComponent(() => import("@/components/layout/TheFooter.vue"))
 </script>

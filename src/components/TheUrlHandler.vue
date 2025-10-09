@@ -20,7 +20,6 @@ onMounted(async () => {
 
   if (Object.keys(qParams).length > 0) {
     if (ch) {
-      console.log(ch)
       appStore.selectedVariable = ch
     }
 
