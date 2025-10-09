@@ -1,19 +1,12 @@
 <script setup>
 import { defineAsyncComponent } from "vue"
-// import { useAppStore } from "@/stores/app.js"
 import { NConfigProvider, NMessageProvider, NFlex } from "naive-ui"
 import { RouterView } from "vue-router"
 import { naiveUithemeOverrides } from "@/utils/naiveUI/naiveUithemeOverrides.js"
-import TheUrlHandler from "@/components/TheUrlHandler.vue"
 
+const TheUrlHandler = defineAsyncComponent(() => import("@/components/TheUrlHandler.vue"))
 const TheHeader = defineAsyncComponent(() => import("@/components/layout/TheHeader.vue"))
 const TheFooter = defineAsyncComponent(() => import("@/components/layout/TheFooter.vue"))
-
-// const appStore = useAppStore()
-
-// onMounted(() => {
-//   appStore.loadAndSetData()
-// })
 </script>
 
 <template>

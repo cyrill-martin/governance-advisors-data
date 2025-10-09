@@ -1,12 +1,13 @@
 <script setup>
-import { computed } from "vue"
+import { defineAsyncComponent, computed } from "vue"
 import { NFlex } from "naive-ui"
-import TheControls from "@/components/TheControls.vue"
-import TheHeatMap from "@/components/TheHeatMap.vue"
 import TheHeatMapTitle from "@/components/TheHeatMapTitle.vue"
-import TheColorBar from "@/components/TheColorBar.vue"
 import TheLegendTitle from "@/components/TheLegendTitle.vue"
 import { useScreenStore } from "@/stores/screen.js"
+
+const TheControls = defineAsyncComponent(() => import("@/components/TheControls.vue"))
+const TheHeatMap = defineAsyncComponent(() => import("@/components/TheHeatMap.vue"))
+const TheColorBar = defineAsyncComponent(() => import("@/components/TheColorBar.vue"))
 
 const screenSize = useScreenStore()
 

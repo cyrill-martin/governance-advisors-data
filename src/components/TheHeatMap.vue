@@ -420,12 +420,11 @@ function addMouseover(d) {
   const valueAbs = d.Count
   const valueRel = d.Percentage
 
-  tooltip.value
-    .select(".line-1")
-    .text(`${characteristic} - ${category} (${year})`)
-    .style("font-weight", "bold")
+  tooltip.value.select(".line-1").text(`${characteristic}`).style("font-weight", "bold")
 
-  tooltip.value.select(".line-2").text(`${valueAbs} of ${total} seats (${valueRel}%)`)
+  tooltip.value.select(".line-2").text(`${category} (${year}):`)
+
+  tooltip.value.select(".line-3").text(`${valueAbs} of ${total} seats (${valueRel}%)`)
 
   tooltip.value.style("visibility", "visible")
 }
@@ -443,6 +442,7 @@ function hideTooltip() {
   <div id="tooltip">
     <div class="line-1"></div>
     <div class="line-2"></div>
+    <div class="line-3"></div>
   </div>
 </template>
 
