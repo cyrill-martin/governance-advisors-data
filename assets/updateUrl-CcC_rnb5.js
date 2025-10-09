@@ -1,0 +1,1 @@
+import{u as s}from"./index-V9ZHI5MU.js";async function c(t,a){const e=s(),r={...{ch:e.selectedVariable,yl:e.selectedYearsRange[0],yu:e.selectedYearsRange[1],av:e.absoluteValues}};return a.push({query:r})}export{c as u};
