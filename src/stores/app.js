@@ -62,10 +62,13 @@ export const useAppStore = defineStore("app", () => {
   }
 
   async function setRandomVariable(variables) {
-    if (!boardMembers.value || !variables || variables.length === 0) {
-      selectedVariable.value = "" // nothing to compute
+    if (!selectedVariable.value) {
+      // Otherwise it is set by the URL
+      if (!boardMembers.value || !variables || variables.length === 0) {
+        selectedVariable.value = "" // nothing to compute
+      }
+      selectedVariable.value = variables[Math.floor(Math.random() * variables.length)]["value"]
     }
-    selectedVariable.value = variables[Math.floor(Math.random() * variables.length)]["value"]
   }
 
   async function getYears(boardMembers, variables) {
@@ -80,12 +83,14 @@ export const useAppStore = defineStore("app", () => {
   }
 
   async function setDefaultYearsRange(years) {
-    if (!years || !years.length) {
-      selectedYearsRange.value = []
-      return
-    }
+    if (selectedYearsRange.value.length === 0) {
+      if (!years || !years.length) {
+        selectedYearsRange.value = []
+        return
+      }
 
-    selectedYearsRange.value = [years[0], years[years.length - 1]]
+      selectedYearsRange.value = [years[0], years[years.length - 1]]
+    }
   }
 
   return {

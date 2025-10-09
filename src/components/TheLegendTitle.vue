@@ -5,7 +5,7 @@ import { useAppStore } from "@/stores/app.js"
 const appStore = useAppStore()
 
 const legendTitle = computed(() => {
-  return appStore.absoluteValues ? "Number of directors (count)" : "Number of directors (%)"
+  return appStore.absoluteValues ? "Number of seats (count)" : "Number of seats (%)"
 })
 </script>
 

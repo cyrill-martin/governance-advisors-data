@@ -20,8 +20,10 @@ const mainHeight = computed(() => {
     <div>
       <h1>{{ $t("home.title") }}</h1>
       <p>
-        Explore how the composition of SMI boards has evolved over time.<br />
-        Use the controls below to focus on different characteristics and years.
+        This heat map shows how SMI board composition has changed over time.<br />
+        Each square represents the number of board seats with a given characteristic in that
+        year.<br /><br />
+        Use the controls below to explore different characteristics and year ranges.
       </p>
     </div>
     <div class="controls">

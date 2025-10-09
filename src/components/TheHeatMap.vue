@@ -5,10 +5,14 @@ import { useScreenStore } from "@/stores/screen.js"
 import { useAppStore } from "@/stores/app.js"
 import { useI18n } from "vue-i18n"
 import { debounce } from "@/utils/screen/debounce.js"
+import { useRoute, useRouter } from "vue-router"
+import { updateUrl } from "@/utils/url/updateUrl.js"
 
 const screenSize = useScreenStore()
 const appStore = useAppStore()
 const { t } = useI18n()
+const route = useRoute()
+const router = useRouter()
 
 onMounted(() => {
   tooltip.value = d3.select("#tooltip")
@@ -31,7 +35,7 @@ watch(
 
 const debouncedRecreate = debounce(() => {
   reDrawViz()
-}, 1200)
+}, 500)
 
 function reDrawViz() {
   d3.select("#svg-visualization").remove()
@@ -146,6 +150,7 @@ watch(
     yearsDomain.value = await getYearsDomain()
     await updateAxes("years")
     await drawRectangles()
+    updateUrl(route, router)
   },
 )
 
@@ -159,6 +164,7 @@ watch(
     await setColorScale()
     await updateAxes("variable")
     await drawRectangles()
+    updateUrl(route, router)
   },
 )
 
@@ -170,6 +176,7 @@ watch(
     colorDomain.value = await getColorDomain()
     await setColorScale()
     await drawRectangles()
+    updateUrl(route, router)
   },
 )
 
@@ -192,7 +199,7 @@ async function getYearsDomain() {
   return screenSize.isMobile ? yearsDomain.reverse() : yearsDomain
 }
 
-const sortByValue = ["Gender", "Experience", "Specialization", "Nationality", "Independence"]
+const sortByValue = ["gender", "skill", "background", "origin", "independence"]
 
 async function getVariableDomain() {
   if (!appStore.selectedVariable) return null
@@ -403,21 +410,22 @@ async function drawRectangles() {
 }
 
 function addMouseover(d) {
+  // Skill — Emerging Markets (2020)
+  // 72 of 219 board seats (32.9%)
+
   const year = d.Year
   const characteristic = t(`variables.${appStore.selectedVariable}`)
-  const total = d.NumberOfBoardMembers
+  const total = d.NumberOfBoardSeats
   const category = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
-
-  tooltip.value.select(".title").text(`${characteristic} (${year})`).style("font-weight", "bold")
-  tooltip.value.select(".total").text(`${total} directors in total`)
-
   const valueAbs = d.Count
   const valueRel = d.Percentage
-  const label = d.Count === 1 ? "director" : "directors"
 
   tooltip.value
-    .select(".category-and-value")
-    .text(`${category}: ${valueAbs} ${label} (${valueRel}%)`)
+    .select(".line-1")
+    .text(`${characteristic} - ${category} (${year})`)
+    .style("font-weight", "bold")
+
+  tooltip.value.select(".line-2").text(`${valueAbs} of ${total} seats (${valueRel}%)`)
 
   tooltip.value.style("visibility", "visible")
 }
@@ -433,10 +441,8 @@ function hideTooltip() {
 
 <template>
   <div id="tooltip">
-    <div class="title"></div>
-    <div class="total"></div>
-    <br />
-    <div class="category-and-value"></div>
+    <div class="line-1"></div>
+    <div class="line-2"></div>
   </div>
 </template>
 
