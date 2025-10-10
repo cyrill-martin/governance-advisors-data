@@ -1,1 +1,0 @@
-import{_ as e,D as o,E as c}from"./index-LnIg-O4v.js";const r={};function n(t,s){return c(),o("div",null,"© 2025 Governance Advisors AG")}const _=e(r,[["render",n],["__scopeId","data-v-6b0378f0"]]);export{_ as default};
