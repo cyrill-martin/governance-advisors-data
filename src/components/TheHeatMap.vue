@@ -430,7 +430,15 @@ function addMouseover(d) {
 }
 
 function handleMouseMove(event) {
-  tooltip.value.style("left", `${event.clientX + 30}px`).style("top", `${event.clientY - 80}px`)
+  const tooltipEl = d3.select("#tooltip")
+  const tooltipWidth = tooltipEl.node().offsetWidth
+  const tooltipHeight = tooltipEl.node().offsetHeight
+
+  const offsetY = 30
+
+  tooltipEl
+    .style("left", `${event.pageX - tooltipWidth / 2}px`)
+    .style("top", `${event.clientY - tooltipHeight - offsetY}px`)
 }
 
 function hideTooltip() {
