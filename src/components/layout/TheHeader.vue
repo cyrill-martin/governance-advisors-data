@@ -69,7 +69,7 @@ function handleAbout() {
       <div class="imprint">
         © 2025 Governance Advisors AG<br />
         Website by
-        <a href="https://kmapper.com" target="_blank" rel="noopener noreferrer">kmapper GmbH</a>
+        <a href="https://kmapper.ch" target="_blank" rel="noopener noreferrer">kmapper GmbH</a>
       </div>
     </n-drawer-content>
   </n-drawer>

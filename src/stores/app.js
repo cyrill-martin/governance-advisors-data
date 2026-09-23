@@ -40,7 +40,7 @@ export const useAppStore = defineStore("app", () => {
       }
 
       const data = await response.json()
-      console.log("Cyrill Martin - kmapper GmbH - https://kmapper.com")
+      console.log("Cyrill Martin - kmapper GmbH - https://kmapper.ch")
 
       boardMembers.value = data
     } catch (error) {
