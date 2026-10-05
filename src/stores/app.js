@@ -15,9 +15,15 @@ export const useAppStore = defineStore("app", () => {
 
   const colors = ref(["#f7fbff", "#6baed6", "#08306b"])
 
-  const selectedData = ref("board")
+  const selectedIndex = ref("smi")
+  const selectedGroup = ref("board")
 
-  const dataOptions = [
+  const indexOptions = [
+    { label: t("index.smi"), value: "smi" },
+    { label: t("index.spi"), value: "spi" },
+  ]
+
+  const groupOptions = [
     { label: t("data.board"), value: "board" },
     { label: t("data.ceos"), value: "ceos" },
   ]
@@ -31,9 +37,20 @@ export const useAppStore = defineStore("app", () => {
 
   watch(
     // Redo it all it the dataset changes
-    () => selectedData.value,
-    async (newValue) => {
+    () => selectedIndex.value,
+    async () => {
+      d3.select("#svg-visualization").remove()
+      d3.select("#svg-color-bar").remove()
+      resetData()
+      await loadAndSetData()
+      updateUrl(route, router)
+    },
+  )
 
+  watch(
+    // Redo it all it the dataset changes
+    () => selectedGroup.value,
+    async (newValue) => {
       if (newValue === "board" && selectedVariable.value === "inBoard") {
         selectedVariable.value = "independence"
       }
@@ -73,11 +90,13 @@ export const useAppStore = defineStore("app", () => {
   }
 
   const dataToFetch = computed(() => {
-    return selectedData.value === "board" ? "boardMembers.json" : "ceos.json"
+    const index = selectedIndex.value === "smi" ? "smi" : "spi"
+
+    return selectedGroup.value === "board" ? `${index}-boardMembers.json` : `${index}-ceos.json`
   })
 
   const shownEntities = computed(() => {
-    return selectedData.value === "board" ? "board seats" : "CEO positions"
+    return selectedGroup.value === "board" ? "board seats" : "CEO positions"
   })
 
   async function getData() {
@@ -147,14 +166,16 @@ export const useAppStore = defineStore("app", () => {
     leaders,
     variables,
     years,
-    dataOptions,
-    selectedData,
+    groupOptions,
+    selectedIndex,
+    indexOptions,
+    selectedGroup,
     selectedVariable,
     selectedYearsRange,
     allSet,
     absoluteValues,
     colors,
     mapDrawn,
-    shownEntities
+    shownEntities,
   }
 })

@@ -12,7 +12,7 @@ onMounted(async () => {
   await router.isReady()
 
   // Whitelist of known parameters
-  const knownParams = new Set(["ds", "ch", "yl", "yu", "av"])
+  const knownParams = new Set(["idx", "dg", "ch", "yl", "yu", "av"])
 
   // Filter out tracking params
   const filteredParams = {}
@@ -30,15 +30,20 @@ onMounted(async () => {
   // Use filtered params
   const qParams = filteredParams
 
-  const ds = qParams.ds || null
+  const idx = qParams.idx || null
+  const dg = qParams.dg || null
   const ch = qParams.ch || null
   const yl = qParams.yl || null
   const yu = qParams.yu || null
   const av = qParams.av || null
 
   if (Object.keys(qParams).length > 0) {
-    if (ds) {
-      appStore.selectedData = ds
+    if (idx) {
+      appStore.selectedIndex = idx
+    }
+
+    if (dg) {
+      appStore.selectedGroup = dg
     }
 
     if (ch) {

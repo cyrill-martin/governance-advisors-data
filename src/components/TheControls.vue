@@ -7,9 +7,14 @@ import { useScreenStore } from "@/stores/screen.js"
 const appStore = useAppStore()
 const screenSize = useScreenStore()
 
-const selectedData = computed({
-  get: () => appStore.selectedData,
-  set: (value) => (appStore.selectedData = value),
+const selectedIndex = computed({
+  get: () => appStore.selectedIndex,
+  set: (value) => (appStore.selectedIndex = value),
+})
+
+const selectedGroup = computed({
+  get: () => appStore.selectedGroup,
+  set: (value) => (appStore.selectedGroup = value),
 })
 
 const options = computed(() => {
@@ -56,9 +61,15 @@ const flexAlignment = computed(() => {
   >
     <div class="select">
       <n-flex vertical>
-        <n-flex vertical class="data-select">
-          <label>{{ $t("controls.data") }}</label>
-          <n-select v-model:value="selectedData" :options="appStore.dataOptions" />
+        <n-flex :vertical="screenSize.isMobile">
+          <n-flex vertical class="index-select">
+            <label>{{ $t("controls.index") }}</label>
+            <n-select v-model:value="selectedIndex" :options="appStore.indexOptions" />
+          </n-flex>
+          <n-flex vertical class="data-select">
+            <label>{{ $t("controls.data") }}</label>
+            <n-select v-model:value="selectedGroup" :options="appStore.groupOptions" />
+          </n-flex>
         </n-flex>
         <n-flex vertical>
           <label>{{ $t("controls.select") }}</label>
@@ -99,6 +110,9 @@ label {
 .select {
   flex: 1;
 }
+.index-select, .data-select {
+  flex: 1;
+}
 .toggle {
   flex: 1;
 }
@@ -114,6 +128,6 @@ label {
   padding-right: 9%;
 }
 .data-select {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 </style>

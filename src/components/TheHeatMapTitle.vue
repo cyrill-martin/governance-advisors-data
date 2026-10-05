@@ -8,10 +8,11 @@ const appStore = useAppStore()
 
 const heatMapTitle = computed(() => {
   if (appStore.selectedVariable) {
-    const dataSet = t(`data.${appStore.selectedData}`)
+    const index = t(`index.${appStore.selectedIndex}.short`)
+    const dataGroup = t(`data.${appStore.selectedGroup}`)
     const varibleLabel = t(`variables.${appStore.selectedVariable}`)
 
-    return `${dataSet} – ${varibleLabel} (${appStore.selectedYearsRange[0]} - ${appStore.selectedYearsRange[1]})`
+    return `${index} ${dataGroup} – ${varibleLabel} (${appStore.selectedYearsRange[0]} - ${appStore.selectedYearsRange[1]})`
   } else {
     return "Select a variable and a range of years above"
   }
