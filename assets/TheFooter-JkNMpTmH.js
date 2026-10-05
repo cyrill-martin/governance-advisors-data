@@ -1,1 +1,0 @@
-import{_ as e,D as o,E as c}from"./index-C5uMltj3.js";const r={};function n(t,s){return c(),o("div",null,"© 2026 Governance Advisors AG")}const _=e(r,[["render",n],["__scopeId","data-v-f31b8305"]]);export{_ as default};
