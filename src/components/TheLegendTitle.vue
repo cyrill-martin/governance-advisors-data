@@ -5,7 +5,8 @@ import { useAppStore } from "@/stores/app.js"
 const appStore = useAppStore()
 
 const legendTitle = computed(() => {
-  return appStore.absoluteValues ? "Number of seats (count)" : "Number of seats (%)"
+  const upperCaseLabel = appStore.shownEntities.charAt(0).toUpperCase() + appStore.shownEntities.slice(1);
+  return appStore.absoluteValues ? `${upperCaseLabel} (count)` : `${upperCaseLabel} (%)`
 })
 </script>
 

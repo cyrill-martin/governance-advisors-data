@@ -1,18 +1,40 @@
 <script setup>
-import { ref, watch, computed } from "vue"
+import { ref, watch, computed, nextTick } from "vue"
 import d3 from "@/d3-importer.js"
 import { useScreenStore } from "@/stores/screen.js"
 import { useAppStore } from "@/stores/app.js"
+import { debounce } from "@/utils/screen/debounce.js"
 
 const screenSize = useScreenStore()
 const appStore = useAppStore()
 
 watch(
   () => appStore.mapDrawn,
-  (newValue) => {
-    if (newValue) drawLegend()
+  async (newValue) => {
+    if (newValue) {
+      await nextTick()
+      drawLegend()
+    }
+  },
+  { immediate: true }  // ← Add this
+)
+
+// Handle screen resizing //////////////////////////////////////////
+watch(
+  () => screenSize.width,
+  () => {
+    debouncedRecreate()
   },
 )
+
+const debouncedRecreate = debounce(() => {
+  reDrawLegend()
+}, 500)
+
+function reDrawLegend() {
+  d3.select("#svg-color-bar").remove()
+  drawLegend()
+}
 
 const svg = ref(null)
 const ctr = ref(null)
@@ -112,12 +134,12 @@ async function getColorDomain() {
 
   if (appStore.absoluteValues) {
     const minMax = d3.extent(
-      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count),
+      appStore.leaders[appStore.selectedVariable].map((item) => item.Count),
     )
     return [minMax[0], minMax[1]]
   } else {
     const minMax = d3.extent(
-      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Percentage),
+      appStore.leaders[appStore.selectedVariable].map((item) => item.Percentage),
     )
     return [minMax[0], minMax[1]]
   }

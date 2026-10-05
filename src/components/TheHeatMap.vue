@@ -15,13 +15,14 @@ const route = useRoute()
 const router = useRouter()
 
 onMounted(() => {
+  console.log("Built by Cyrill Martin - kmapper GmbH - https://kmapper.ch")
   tooltip.value = d3.select("#tooltip")
 })
 
 watch(
   () => appStore.allSet,
-  () => {
-    drawHeatMap()
+  (newValue) => {
+    if (newValue) drawHeatMap()
   },
 )
 
@@ -73,8 +74,6 @@ const yAxis = ref(null)
 const colorScale = ref(null)
 
 async function drawHeatMap() {
-  appStore.mapDrawn = false
-
   yearsDomain.value = await getYearsDomain()
   variableDomain.value = await getVariableDomain()
   colorDomain.value = await getColorDomain()
@@ -199,12 +198,12 @@ async function getYearsDomain() {
   return screenSize.isMobile ? yearsDomain.reverse() : yearsDomain
 }
 
-const sortByValue = ["gender", "skill", "background", "origin", "independence"]
+const sortByValue = ["gender", "skill", "background", "origin", "independence", "inBoard"]
 
 async function getVariableDomain() {
   if (!appStore.selectedVariable) return null
 
-  let data = appStore.boardMembers[appStore.selectedVariable]
+  let data = appStore.leaders[appStore.selectedVariable]
   const maxYear = d3.max(data, (d) => d.Year)
   data = data.filter((obj) => obj.Year === maxYear)
 
@@ -224,10 +223,6 @@ async function getVariableDomain() {
       return true
     })
 
-  // if (!sortByValue.includes(appStore.selectedVariable)) {
-  //   result.sort((a, b) => a.localeCompare(b))
-  // }
-
   return result
 }
 
@@ -236,14 +231,14 @@ async function getColorDomain() {
 
   if (appStore.absoluteValues) {
     const minMax = d3.extent(
-      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Count),
+      appStore.leaders[appStore.selectedVariable].map((item) => item.Count),
     )
     const midValue = (minMax[0] + minMax[1]) / 2
 
     return [minMax[0], midValue, minMax[1]]
   } else {
     const minMax = d3.extent(
-      appStore.boardMembers[appStore.selectedVariable].map((item) => item.Percentage),
+      appStore.leaders[appStore.selectedVariable].map((item) => item.Percentage),
     )
     const midValue = (minMax[0] + minMax[1]) / 2
 
@@ -366,7 +361,7 @@ function colorAccessor(d) {
 }
 
 async function drawRectangles() {
-  const data = appStore.boardMembers[appStore.selectedVariable].filter((item) =>
+  const data = appStore.leaders[appStore.selectedVariable].filter((item) =>
     yearsDomain.value.includes(item.Year),
   )
 
@@ -399,12 +394,13 @@ async function drawRectangles() {
     .attr("fill", (d) => colorAccessor(d))
     // .attr("cursor", "pointer")
     .on("mouseover", function (_, d) {
+      d3.selectAll(".rectangle").attr("stroke-width", 1)
       d3.select(this).attr("stroke-width", 2.5).raise()
       addMouseover(d)
     })
     .on("mousemove", (event) => handleMouseMove(event))
     .on("mouseout", function () {
-      d3.select(this).attr("stroke-width", 1)
+      d3.selectAll(".rectangle").attr("stroke-width", 1)
       hideTooltip()
     })
 }
@@ -415,7 +411,7 @@ function addMouseover(d) {
 
   const year = d.Year
   const characteristic = t(`variables.${appStore.selectedVariable}`)
-  const total = d.NumberOfBoardSeats
+  const total = d.NumberOfSeats
   const category = t(`variables.${appStore.selectedVariable}.${d[appStore.selectedVariable]}`)
   const valueAbs = d.Count
   const valueRel = d.Percentage
@@ -424,7 +420,7 @@ function addMouseover(d) {
 
   tooltip.value.select(".line-2").text(`${category} (${year}):`)
 
-  tooltip.value.select(".line-3").text(`${valueAbs} of ${total} seats (${valueRel}%)`)
+  tooltip.value.select(".line-3").text(`${valueAbs} of ${total} ${appStore.shownEntities} (${valueRel}%)`)
 
   tooltip.value.style("visibility", "visible")
 }

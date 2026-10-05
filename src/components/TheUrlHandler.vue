@@ -10,15 +10,37 @@ const router = useRouter()
 
 onMounted(async () => {
   await router.isReady()
-  // Access query parameters
-  const qParams = route.query
 
+  // Whitelist of known parameters
+  const knownParams = new Set(["ds", "ch", "yl", "yu", "av"])
+
+  // Filter out tracking params
+  const filteredParams = {}
+  for (const [key, value] of Object.entries(route.query)) {
+    if (knownParams.has(key)) {
+      filteredParams[key] = value
+    }
+  }
+
+  // Update URL if we removed any params
+  if (Object.keys(filteredParams).length < Object.keys(route.query).length) {
+    await router.replace({ query: filteredParams })
+  }
+
+  // Use filtered params
+  const qParams = filteredParams
+
+  const ds = qParams.ds || null
   const ch = qParams.ch || null
   const yl = qParams.yl || null
   const yu = qParams.yu || null
   const av = qParams.av || null
 
   if (Object.keys(qParams).length > 0) {
+    if (ds) {
+      appStore.selectedData = ds
+    }
+
     if (ch) {
       appStore.selectedVariable = ch
     }

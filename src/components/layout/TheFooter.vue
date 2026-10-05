@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>© 2025 Governance Advisors AG</div>
+  <div>© 2026 Governance Advisors AG</div>
 </template>
 
 <style scoped>

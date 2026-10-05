@@ -1,6 +1,13 @@
 {
-  "home.title": "Characteristics of SMI Board Directors",
+  "home.title": "Who Governs Swiss Companies?",
+  "home.subtitle": "Board Members and CEOs of SMI and SPI Companies",
+  "home.intro1": "This heat map shows the characteristics of board members or CEOs at SMI and SPI companies.",
+  "home.intro2": "Select a group, characteristics, and a year range to explore. Each cell counts the board seats or CEO",
+  "home.intro3": "positions held by people with a given characteristic in a given year.",
   "header.navigation.about": "About the data",
+  "controls.data": "Dataset",
+  "data.board": "Board Seats",
+  "data.ceos": "CEO Positions",
   "controls.select": "Characteristic",
   "controls.toggle": "Absolute values",
   "controls.slider": "Years",
@@ -46,5 +53,8 @@
   "variables.independence.IndependenceFormerExecutiv_tf": "Former executive",
   "variables.independence.IndependenceRepr_tf": "Shareholder representative",
   "variables.independence.IndependenceConflict_tf": "Conflict of interests",
-  "variables.independence.IndependenceOther_tf": "Other dependence"
+  "variables.independence.IndependenceOther_tf": "Other dependence",
+  "variables.inBoard": "Also on the board",
+  "variables.inBoard.No": "No",
+  "variables.inBoard.Yes": "Yes"
 }

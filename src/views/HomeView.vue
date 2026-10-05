@@ -19,11 +19,11 @@ const mainHeight = computed(() => {
   <n-flex vertical>
     <div>
       <h1>{{ $t("home.title") }}</h1>
+      <h2>{{ $t("home.subtitle") }}</h2>
       <p>
-        This heat map shows how SMI board composition has changed over time.<br />
-        Each square represents the number of board seats with a given characteristic in that
-        year.<br /><br />
-        Use the controls below to explore different characteristics and year ranges.
+        {{ $t("home.intro1") }}<br>
+        {{ $t("home.intro2") }}<br>
+        {{ $t("home.intro3") }}
       </p>
     </div>
     <div class="controls">
@@ -53,6 +53,13 @@ const mainHeight = computed(() => {
 </template>
 
 <style scoped>
+h1 {
+  margin-bottom: 0.25rem;
+}
+h2 {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
 @media (min-width: 1000px) {
   .controls {
     margin-bottom: 3rem;
