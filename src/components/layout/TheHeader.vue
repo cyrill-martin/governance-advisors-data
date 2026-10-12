@@ -62,7 +62,7 @@ function handleAbout() {
         <img
           class="chart"
           :src="chart"
-          alt="A chart about the number of companies in the Swiss Market Index (SMI) per year."
+          alt="A chart about the number of companies in the Swiss Market Index (SMI) and Swiss Performance Index (SPI) per year - from 1988 up to today."
         />
       </div>
       <div>
