@@ -1,6 +1,6 @@
 <script setup>
 import logo from "@/assets/images/ga_logo.png"
-import chart from "@/assets/images/smi_number_of_companies_until2024.png"
+import chart from "@/assets/images/number_of_companies.png"
 import { ref, computed } from "vue"
 import { NFlex, NDrawer, NDrawerContent, NIcon } from "naive-ui"
 import { useScreenStore } from "@/stores/screen.js"
@@ -45,13 +45,20 @@ function handleAbout() {
           target="_blank"
           rel="noopener noreferrer"
           >Swiss Market Index (SMI)</a
-        >, the main blue-chip index of the SIX Swiss Exchange. The index introduced in 1988
-        comprised 24 stocks, with four companies having two classes of shares in the index (Ciba
-        Geigy, Nestlé, SBG, SBV). For the purposes of this analysis, the figure of 20 companies (or
-        boards) in the SMI in 1988 is used.
+        >, the main blue-chip index of the SIX Swiss Exchange, and in the broader
+        <a
+          href="https://www.six-group.com/en/market-data/indices/switzerland/equity/spi.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Swiss Performance Index (SPI)</a
+        >. The SMI introduced in 1988 comprised 24 stocks, with four companies having two classes of
+        shares in the index (Ciba Geigy, Nestlé, SBG, SBV). For the purposes of this analysis, the
+        figure of 20 companies (or boards) in the SMI in 1988 is used. SPI companies not included in
+        the SMI are covered from 1998 onward. In 2026, the dataset comprises 20 SMI companies and
+        166 additional SPI companies.
       </div>
       <div>
-        <h4>Number of SMI Companies per Year</h4>
+        <h4>Number of Companies per Year</h4>
         <img
           class="chart"
           :src="chart"

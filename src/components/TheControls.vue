@@ -110,7 +110,10 @@ label {
 .select {
   flex: 1;
 }
-.index-select, .data-select {
+.index-select {
+  flex: 1;
+}
+.data-select {
   flex: 1;
 }
 .toggle {
