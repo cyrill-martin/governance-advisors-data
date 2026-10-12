@@ -74,7 +74,7 @@ function handleAbout() {
         for further information about scope and source of the data.
       </div>
       <div class="imprint">
-        © 2025 Governance Advisors AG<br />
+        © 2026 Governance Advisors AG<br />
         Website by
         <a href="https://kmapper.ch" target="_blank" rel="noopener noreferrer">kmapper GmbH</a>
       </div>
